@@ -1,0 +1,254 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+
+    /* Background & Foreground */
+    --background: 0.97 0.005 280;
+    --foreground: 0.15 0.02 280;
+
+    /* Card */
+    --card: 1 0 0;
+    --card-foreground: 0.15 0.02 280;
+
+    /* Popover */
+    --popover: 1 0 0;
+    --popover-foreground: 0.15 0.02 280;
+
+    /* Primary - Purple */
+    --primary: 0.48 0.22 290;
+    --primary-foreground: 0.99 0 0;
+
+    /* Secondary */
+    --secondary: 0.93 0.02 280;
+    --secondary-foreground: 0.25 0.05 280;
+
+    /* Muted */
+    --muted: 0.94 0.01 280;
+    --muted-foreground: 0.52 0.04 280;
+
+    /* Accent - Cyan */
+    --accent: 0.88 0.06 200;
+    --accent-foreground: 0.15 0.08 200;
+
+    /* Destructive */
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+
+    /* Border & Input */
+    --border: 0.88 0.02 280;
+    --input: 0.88 0.02 280;
+    --ring: 0.48 0.22 290;
+
+    /* Charts */
+    --chart-1: 0.55 0.22 290;
+    --chart-2: 0.65 0.18 200;
+    --chart-3: 0.72 0.19 150;
+    --chart-4: 0.75 0.18 50;
+    --chart-5: 0.65 0.22 20;
+
+    /* Sidebar */
+    --sidebar: 0.14 0.04 280;
+    --sidebar-foreground: 0.92 0.02 280;
+    --sidebar-primary: 0.55 0.22 290;
+    --sidebar-primary-foreground: 0.99 0 0;
+    --sidebar-accent: 0.22 0.05 280;
+    --sidebar-accent-foreground: 0.92 0.02 280;
+    --sidebar-border: 0.25 0.04 280;
+    --sidebar-ring: 0.55 0.22 290;
+
+    /* Custom tokens */
+    --violet: 0.48 0.22 290;
+    --indigo: 0.45 0.2 265;
+    --cyan: 0.72 0.18 200;
+    --emerald: 0.68 0.18 155;
+    --amber: 0.78 0.18 75;
+    --rose: 0.62 0.22 15;
+  }
+
+  .dark {
+    --background: 0.12 0.03 280;
+    --foreground: 0.95 0.01 280;
+
+    --card: 0.17 0.04 280;
+    --card-foreground: 0.95 0.01 280;
+
+    --popover: 0.17 0.04 280;
+    --popover-foreground: 0.95 0.01 280;
+
+    --primary: 0.62 0.22 290;
+    --primary-foreground: 0.12 0.03 280;
+
+    --secondary: 0.22 0.05 280;
+    --secondary-foreground: 0.92 0.02 280;
+
+    --muted: 0.22 0.05 280;
+    --muted-foreground: 0.62 0.04 280;
+
+    --accent: 0.28 0.08 200;
+    --accent-foreground: 0.85 0.08 200;
+
+    --destructive: 0.62 0.22 15;
+    --destructive-foreground: 0.95 0.01 280;
+
+    --border: 0.25 0.04 280;
+    --input: 0.25 0.04 280;
+    --ring: 0.62 0.22 290;
+
+    --chart-1: 0.65 0.22 290;
+    --chart-2: 0.72 0.18 200;
+    --chart-3: 0.72 0.19 150;
+    --chart-4: 0.78 0.18 50;
+    --chart-5: 0.68 0.22 20;
+
+    --sidebar: 0.10 0.03 280;
+    --sidebar-foreground: 0.92 0.02 280;
+    --sidebar-primary: 0.62 0.22 290;
+    --sidebar-primary-foreground: 0.99 0 0;
+    --sidebar-accent: 0.18 0.05 280;
+    --sidebar-accent-foreground: 0.92 0.02 280;
+    --sidebar-border: 0.22 0.04 280;
+    --sidebar-ring: 0.62 0.22 290;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+@layer utilities {
+  .gradient-primary {
+    background: linear-gradient(135deg, oklch(0.48 0.22 290), oklch(0.45 0.2 265));
+  }
+
+  .gradient-primary-text {
+    background: linear-gradient(135deg, oklch(0.55 0.22 290), oklch(0.65 0.18 200));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gradient-cyan-text {
+    background: linear-gradient(135deg, oklch(0.65 0.18 200), oklch(0.72 0.19 150));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gradient-hero {
+    background: linear-gradient(135deg, oklch(0.14 0.06 290) 0%, oklch(0.12 0.05 265) 50%, oklch(0.14 0.04 200) 100%);
+  }
+
+  .gradient-card {
+    background: linear-gradient(135deg, oklch(0.48 0.22 290 / 0.1), oklch(0.65 0.18 200 / 0.1));
+  }
+
+  .glass-card {
+    background: oklch(1 0 0 / 0.05);
+    backdrop-filter: blur(12px);
+    border: 1px solid oklch(1 0 0 / 0.1);
+  }
+
+  .sidebar-dark {
+    background: oklch(0.10 0.03 280);
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 3s ease-in-out infinite;
+  }
+
+  .animate-count-up {
+    animation: countUp 1s ease-out forwards;
+  }
+
+  .confetti-piece {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    animation: confettiFall 3s ease-in forwards;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes confettiFall {
+  0% { transform: translateY(-100vh) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.3s ease-out;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.4s ease-out;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.3s ease-out;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: oklch(0.55 0.22 290 / 0.4);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: oklch(0.55 0.22 290 / 0.7);
+}

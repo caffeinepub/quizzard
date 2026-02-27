@@ -1,0 +1,248 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Comprehensive AI Quiz Platform web application with 15+ pages. Features include AI quiz generation, gamification (XP, leaderboards, achievements), student/teacher dashboards, analytics, quiz library, manual quiz creator, question bank, pricing page, and user profiles. Built with React 18, TypeScript, Tailwind CSS, React Router, Recharts, and Lucide React. Modern SaaS + gamified UI blending Kahoot energy with Notion's clean design.",
+  "architectural_notes": [
+    "Tech stack: React 18 + TypeScript, Tailwind CSS, React Router, Recharts, Lucide React",
+    "Design system: Purple/Violet gradient primary (#7C3AED to #4F46E5), Cyan/Teal accent, dark sidebar navigation, rounded-xl cards",
+    "Navigation: Persistent sidebar for authenticated pages, role-based views (student vs teacher), top navbar with avatar/notifications/XP",
+    "All pages use consistent mock data: 10+ sample quizzes, 10 leaderboard users, sample achievements, sample analytics"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Abstract AI brain/neural network illustration for hero section, vibrant purple and cyan tones on dark background (hero-brain.dim_1200x600.png)\n- Cartoon-style trophy and medal illustration for leaderboard podium, gold silver bronze metallic finish (leaderboard-trophy.dim_400x400.png)\n- Geometric achievement badge collection icons, 12 distinct badge shapes in purple cyan and gold (achievement-badges.dim_800x400.png)\n- Abstract flowing gradient background texture, deep purple to indigo with subtle cyan light rays (gradient-bg.dim_1920x1080.png)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-landing-page-with-animated-gradient-hero-section-with-ai-quiz-generator-headline-sub-headline-and-cta-buttons-start-quiz-generate-quiz-features-section-with-ai-generation-adaptive-difficulty-and-analytics-cards-3-step-how-it-works-section-with-icons-interactive-demo-quiz-preview-with-a-sample-question-stats-section-showing-users-count-quizzes-generated-and-accuracy-rate-student-teacher-testimonials-pricing-section-free-pro-enterprise-with-feature-comparison-and-a-footer-with-navigation-links-fully-responsive",
+      "title": "Create a Landing Page (/) with: animated gradient hero section with 'AI Quiz Generator' headline, sub-headline, and CTA buttons (Start Quiz, Generate Quiz); features section with AI generation, adaptive difficulty, and analytics cards; 3-step 'How It Works' section with icons; interactive demo quiz preview with a sample question; stats section showing users count, quizzes generated, and accuracy rate; student/teacher testimonials; pricing section (Free/Pro/Enterprise) with feature comparison; and a footer with navigation links. Fully responsive.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-login-page-login-with-an-email-password-form-a-google-login-button-ui-only-no-real-auth-a-forgot-password-link-and-a-clean-card-design-create-a-signup-page-signup-with-animated-role-selection-cards-student-teacher-admin-with-icons-name-email-password-fields-a-terms-acceptance-checkbox-and-animated-transitions-between-role-selections",
+      "title": "Create a Login page (/login) with an email/password form, a Google login button (UI only, no real auth), a 'Forgot password' link, and a clean card design. Create a Signup page (/signup) with animated role selection cards (Student / Teacher / Admin) with icons, name/email/password fields, a terms acceptance checkbox, and animated transitions between role selections.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-student-dashboard-dashboard-with-a-welcome-header-showing-user-name-and-xp-level-a-continue-last-quiz-card-a-recent-quizzes-list-with-scores-an-ai-recommended-quizzes-section-performance-stats-streak-quizzes-completed-accuracy-xp-points-a-leaderboard-widget-showing-the-top-5-users-a-weekly-performance-line-chart-recharts-and-quick-action-buttons-populate-with-realistic-mock-data",
+      "title": "Create a Student Dashboard (/dashboard) with: a welcome header showing user name and XP level; a 'Continue Last Quiz' card; a recent quizzes list with scores; an AI-recommended quizzes section; performance stats (streak, quizzes completed, accuracy, XP points); a leaderboard widget showing the top 5 users; a weekly performance line chart (Recharts); and quick action buttons. Populate with realistic mock data.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-teacher-admin-dashboard-teacher-dashboard-with-stat-overview-cards-total-students-quizzes-created-avg-score-completion-rate-a-create-quiz-quick-action-a-manage-quizzes-table-with-edit-delete-actions-a-student-performance-overview-a-bar-chart-for-topic-scores-and-a-line-chart-for-weekly-activity-recharts-a-question-bank-summary-panel-and-a-recent-activity-feed-populate-with-realistic-mock-data",
+      "title": "Create a Teacher/Admin Dashboard (/teacher-dashboard) with: stat overview cards (total students, quizzes created, avg score, completion rate); a Create Quiz quick action; a manage-quizzes table with edit/delete actions; a student performance overview; a bar chart for topic scores and a line chart for weekly activity (Recharts); a question bank summary panel; and a recent activity feed. Populate with realistic mock data.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-an-ai-quiz-generator-page-generate-with-a-topic-input-field-with-suggestion-chips-a-difficulty-selector-easy-medium-hard-expert-with-visual-indicators-question-type-checkboxes-mcq-true-false-fill-in-blanks-coding-questions-a-number-of-questions-slider-5-50-a-language-selection-dropdown-10-languages-an-advanced-options-accordion-containing-a-pdf-upload-button-a-generate-from-text-textarea-and-a-voice-input-button-a-generate-button-with-a-loading-spinner-animation-and-a-preview-section-that-shows-generated-quiz-questions-with-a-gradient-card-design",
+      "title": "Create an AI Quiz Generator page (/generate) with: a topic input field with suggestion chips; a difficulty selector (Easy/Medium/Hard/Expert) with visual indicators; question type checkboxes (MCQ, True/False, Fill in blanks, Coding questions); a number-of-questions slider (5–50); a language selection dropdown (10+ languages); an advanced options accordion containing a PDF upload button, a 'Generate from text' textarea, and a voice input button; a Generate button with a loading spinner animation; and a preview section that shows generated quiz questions with a gradient card design.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-quiz-playing-interface-quiz-id-with-a-distraction-free-layout-with-a-dark-mode-toggle-prominent-question-text-a-countdown-timer-with-circular-svg-progress-indicator-that-turns-red-when-under-10-seconds-answer-option-cards-with-hover-and-selected-states-a-progress-bar-showing-question-x-of-n-previous-next-navigation-a-flag-question-button-a-live-score-display-a-power-ups-bar-50-50-skip-extra-time-in-kahoot-style-an-adaptive-difficulty-indicator-badge-and-smooth-css-animations-between-questions-use-mock-quiz-data",
+      "title": "Create a Quiz Playing Interface (/quiz/:id) with: a distraction-free layout with a dark mode toggle; prominent question text; a countdown timer with circular SVG progress indicator that turns red when under 10 seconds; answer option cards with hover and selected states; a progress bar showing 'Question X of N'; Previous/Next navigation; a flag question button; a live score display; a power-ups bar (50/50, Skip, Extra Time) in Kahoot style; an adaptive difficulty indicator badge; and smooth CSS animations between questions. Use mock quiz data.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-results-page-results-with-a-large-animated-score-number-and-letter-grade-a-stats-row-correct-incorrect-time-taken-accuracy-topic-analysis-breakdown-with-labeled-progress-bars-an-ai-feedback-section-with-personalized-text-insights-a-weak-areas-list-with-recommendations-a-mini-performance-trend-chart-recommended-next-quizzes-cards-share-and-retake-buttons-and-a-confetti-animation-that-triggers-for-scores-above-80",
+      "title": "Create a Results Page (/results) with: a large animated score number and letter grade; a stats row (correct, incorrect, time taken, accuracy %); topic analysis breakdown with labeled progress bars; an AI feedback section with personalized text insights; a weak areas list with recommendations; a mini performance trend chart; recommended next quizzes cards; Share and Retake buttons; and a confetti animation that triggers for scores above 80%.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-quiz-library-page-library-with-a-search-bar-a-filter-sidebar-subject-difficulty-popularity-ai-recommended-recently-added-a-quiz-cards-grid-showing-title-topic-question-count-star-rating-play-button-and-difficulty-badge-a-featured-quizzes-carousel-at-the-top-and-category-tabs-populate-with-at-least-10-mock-quizzes",
+      "title": "Create a Quiz Library page (/library) with: a search bar; a filter sidebar (Subject, Difficulty, Popularity, AI Recommended, Recently Added); a quiz cards grid showing title, topic, question count, star rating, play button, and difficulty badge; a featured quizzes carousel at the top; and category tabs. Populate with at least 10 mock quizzes.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-leaderboard-page-leaderboard-with-a-global-ranking-table-rank-avatar-name-xp-quizzes-accuracy-friends-and-weekly-challenge-tabs-a-top-3-podium-display-with-gold-silver-bronze-medals-the-current-user-s-own-rank-highlighted-and-a-weekly-challenge-countdown-timer-populate-with-at-least-10-mock-users",
+      "title": "Create a Leaderboard page (/leaderboard) with: a global ranking table (rank, avatar, name, XP, quizzes, accuracy); Friends and Weekly Challenge tabs; a top-3 podium display with gold/silver/bronze medals; the current user's own rank highlighted; and a weekly challenge countdown timer. Populate with at least 10 mock users.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-an-achievements-page-achievements-with-a-badges-grid-with-earned-colored-and-locked-greyed-out-states-and-descriptions-a-streak-tracker-with-a-calendar-heatmap-visualization-a-level-progress-bar-showing-xp-to-next-level-and-achievement-categories-learning-streak-social-speed-as-filter-tabs-populate-with-a-mix-of-earned-and-locked-mock-achievements",
+      "title": "Create an Achievements page (/achievements) with: a badges grid with earned (colored) and locked (greyed-out) states and descriptions; a streak tracker with a calendar heatmap visualization; a level progress bar showing XP to next level; and achievement categories (Learning, Streak, Social, Speed) as filter tabs. Populate with a mix of earned and locked mock achievements.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-manual-quiz-creator-page-create-quiz-with-a-multi-step-form-flow-step-1-quiz-details-title-description-subject-difficulty-step-2-add-questions-question-text-answer-options-correct-answer-selector-question-type-selector-difficulty-per-question-drag-handles-for-reordering-question-bank-search-to-add-existing-questions-import-csv-button-step-3-review-and-publish-show-a-step-indicator-at-the-top",
+      "title": "Create a Manual Quiz Creator page (/create-quiz) with a multi-step form flow: Step 1 – Quiz details (title, description, subject, difficulty); Step 2 – Add questions (question text, answer options, correct answer selector, question type selector, difficulty per question, drag handles for reordering, question bank search to add existing questions, Import CSV button); Step 3 – Review and Publish. Show a step indicator at the top.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-question-bank-page-question-bank-with-a-searchable-filterable-table-of-questions-topic-difficulty-question-type-columns-filter-controls-for-topic-difficulty-and-question-type-edit-delete-tag-action-buttons-per-row-bulk-operation-checkboxes-with-a-bulk-action-toolbar-an-add-to-quiz-button-per-row-and-a-difficulty-distribution-donut-bar-chart-recharts-populate-with-at-least-20-mock-questions",
+      "title": "Create a Question Bank page (/question-bank) with: a searchable, filterable table of questions (topic, difficulty, question type columns); filter controls for topic, difficulty, and question type; edit/delete/tag action buttons per row; bulk operation checkboxes with a bulk-action toolbar; an 'Add to Quiz' button per row; and a difficulty distribution donut/bar chart (Recharts). Populate with at least 20 mock questions.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-an-analytics-dashboard-page-analytics-with-a-date-range-picker-kpi-cards-avg-score-completion-rate-total-attempts-improvement-rate-a-line-chart-for-performance-over-time-a-bar-chart-for-scores-by-topic-subject-a-pie-chart-for-question-type-distribution-all-using-recharts-a-student-progress-table-and-an-export-to-csv-button-populate-with-realistic-mock-data",
+      "title": "Create an Analytics Dashboard page (/analytics) with: a date range picker; KPI cards (avg score, completion rate, total attempts, improvement rate); a line chart for performance over time; a bar chart for scores by topic/subject; a pie chart for question type distribution (all using Recharts); a student progress table; and an Export to CSV button. Populate with realistic mock data.",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-pricing-page-pricing-with-three-tier-cards-free-pro-at-9-99-mo-enterprise-with-custom-pricing-a-full-feature-comparison-table-a-monthly-annual-billing-toggle-showing-20-discount-for-annual-an-faq-accordion-section-and-cta-buttons-on-each-plan-this-page-should-be-accessible-without-authentication",
+      "title": "Create a Pricing Page (/pricing) with: three tier cards (Free, Pro at $9.99/mo, Enterprise with custom pricing); a full feature comparison table; a monthly/annual billing toggle showing 20% discount for annual; an FAQ accordion section; and CTA buttons on each plan. This page should be accessible without authentication.",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-profile-page-profile-with-a-user-avatar-with-an-upload-button-ui-only-an-editable-profile-form-name-email-bio-a-stats-summary-quizzes-taken-avg-score-total-xp-a-recent-activity-feed-notification-preference-toggles-and-account-settings-change-password-link-delete-account-link",
+      "title": "Create a Profile Page (/profile) with: a user avatar with an upload button (UI only); an editable profile form (name, email, bio); a stats summary (quizzes taken, avg score, total XP); a recent activity feed; notification preference toggles; and account settings (change password link, delete account link).",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-application-wide-navigation-a-persistent-dark-sidebar-for-authenticated-pages-with-links-to-dashboard-generate-quiz-quiz-library-leaderboard-achievements-analytics-and-profile-each-with-a-lucide-icon-and-label-role-based-display-student-vs-teacher-sidebar-items-a-top-navbar-with-user-avatar-notifications-bell-and-xp-display-and-a-separate-landing-page-header-with-login-signup-cta-buttons-include-a-hamburger-menu-for-mobile-viewports-configure-react-router-to-connect-all-15-page-routes",
+      "title": "Implement application-wide navigation: a persistent dark sidebar for authenticated pages with links to Dashboard, Generate Quiz, Quiz Library, Leaderboard, Achievements, Analytics, and Profile, each with a Lucide icon and label; role-based display (student vs teacher sidebar items); a top navbar with user avatar, notifications bell, and XP display; and a separate landing page header with Login/Signup CTA buttons. Include a hamburger menu for mobile viewports. Configure React Router to connect all 15+ page routes.",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-consistent-design-system-across-all-pages-primary-purple-violet-gradient-7c3aed-to-4f46e5-with-cyan-teal-accents-cards-with-rounded-xl-corners-and-subtle-box-shadows-smooth-css-transitions-and-micro-animations-on-interactive-elements-loading-skeleton-states-for-data-heavy-sections-and-toast-notification-components-for-user-actions-ensure-all-pages-are-mobile-responsive",
+      "title": "Apply a consistent design system across all pages: primary purple/violet gradient (#7C3AED to #4F46E5) with cyan/teal accents; cards with rounded-xl corners and subtle box shadows; smooth CSS transitions and micro-animations on interactive elements; loading skeleton states for data-heavy sections; and toast notification components for user actions. Ensure all pages are mobile-responsive.",
+      "reqIds": [
+        "REQ-17"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Landing page with hero, features, how-it-works, demo quiz, stats, testimonials, pricing, and footer",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Authentication pages: Login and Signup with role selection (Student/Teacher/Admin)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Student Dashboard with XP, recent quizzes, AI recommendations, leaderboard widget, and performance chart",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Teacher/Admin Dashboard with student stats, quiz management table, and analytics charts",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "AI Quiz Generator page with topic input, difficulty, question types, slider, language selection, PDF upload, and preview",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Quiz Playing Interface with timer, answer cards, progress bar, power-ups, and adaptive difficulty indicator",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Results Page with animated score, topic analysis, AI feedback, weak areas, and confetti for high scores",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Quiz Library with search, filters, quiz cards grid, featured carousel, and category tabs",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Leaderboard with global rankings, podium display, friends/weekly tabs, and countdown timer",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-10",
+      "summary": "Achievements page with badges grid, streak calendar heatmap, level progress bar, and categories",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-11",
+      "summary": "Manual Quiz Creator with multi-step form, question editor, CSV import, drag reordering, and question bank search",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-12",
+      "summary": "Question Bank with searchable table, filters, bulk operations, and difficulty distribution chart",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-13",
+      "summary": "Analytics Dashboard with KPI cards, date range picker, line/bar/pie charts, student table, and CSV export",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-14",
+      "summary": "Pricing Page with three tiers, feature comparison table, monthly/annual toggle, and FAQ",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-15",
+      "summary": "Profile Page with avatar upload, edit form, stats summary, activity feed, and notification preferences",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "AI Quiz Platform",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

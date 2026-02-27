@@ -1,0 +1,440 @@
+{
+  "kind": "build_request",
+  "title": "Comprehensive AI Quiz Platform – Full Frontend Application",
+  "projectName": "QuizAI Platform",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a Landing Page (/) with: animated gradient hero section with 'AI Quiz Generator' headline, sub-headline, and CTA buttons (Start Quiz, Generate Quiz); features section with AI generation, adaptive difficulty, and analytics cards; 3-step 'How It Works' section with icons; interactive demo quiz preview with a sample question; stats section showing users count, quizzes generated, and accuracy rate; student/teacher testimonials; pricing section (Free/Pro/Enterprise) with feature comparison; and a footer with navigation links. Fully responsive.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Landing Page (/)",
+          "Hero section with animated gradient background",
+          "Features section",
+          "How it works",
+          "Demo quiz preview",
+          "Stats section",
+          "Testimonials",
+          "Pricing section"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Animated gradient background is visible in the hero section",
+        "CTA buttons navigate to /generate and quiz flow",
+        "Demo quiz preview renders a sample question with selectable options",
+        "Pricing section shows Free, Pro ($9.99/mo), and Enterprise tiers",
+        "Page is fully responsive on mobile and desktop"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Create a Login page (/login) with an email/password form, a Google login button (UI only, no real auth), a 'Forgot password' link, and a clean card design. Create a Signup page (/signup) with animated role selection cards (Student / Teacher / Admin) with icons, name/email/password fields, a terms acceptance checkbox, and animated transitions between role selections.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Login page (/login): email/password form, Google login button",
+          "Signup page (/signup): role selection cards (Student/Teacher/Admin)"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Login page renders with email, password fields and a submit button",
+        "Signup page shows three role selection cards with distinct icons",
+        "Selecting a role visually highlights the chosen card",
+        "Both pages link to each other and to the landing page"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Create a Student Dashboard (/dashboard) with: a welcome header showing user name and XP level; a 'Continue Last Quiz' card; a recent quizzes list with scores; an AI-recommended quizzes section; performance stats (streak, quizzes completed, accuracy, XP points); a leaderboard widget showing the top 5 users; a weekly performance line chart (Recharts); and quick action buttons. Populate with realistic mock data.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Student Dashboard (/dashboard)",
+          "Welcome header with user name and XP level",
+          "Performance stats: streak, quizzes completed, accuracy, XP points",
+          "Progress chart (line chart showing weekly performance)"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Dashboard renders mock user name, XP level, and streak",
+        "Weekly performance line chart is visible and uses Recharts",
+        "Leaderboard widget shows at least 5 mock users with XP scores",
+        "Quick action buttons are clickable and navigate to relevant routes"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Create a Teacher/Admin Dashboard (/teacher-dashboard) with: stat overview cards (total students, quizzes created, avg score, completion rate); a Create Quiz quick action; a manage-quizzes table with edit/delete actions; a student performance overview; a bar chart for topic scores and a line chart for weekly activity (Recharts); a question bank summary panel; and a recent activity feed. Populate with realistic mock data.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Teacher/Admin Dashboard (/teacher-dashboard)",
+          "Stats overview: total students, quizzes created, avg score, completion rate",
+          "Manage quizzes table with edit/delete",
+          "Analytics charts: bar chart for topic scores, line chart for weekly activity"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Four KPI stat cards are visible at the top",
+        "Quiz management table shows at least 5 mock quizzes with edit/delete buttons",
+        "Bar chart and line chart render using Recharts with mock data",
+        "Recent activity feed lists at least 5 mock events"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Create an AI Quiz Generator page (/generate) with: a topic input field with suggestion chips; a difficulty selector (Easy/Medium/Hard/Expert) with visual indicators; question type checkboxes (MCQ, True/False, Fill in blanks, Coding questions); a number-of-questions slider (5–50); a language selection dropdown (10+ languages); an advanced options accordion containing a PDF upload button, a 'Generate from text' textarea, and a voice input button; a Generate button with a loading spinner animation; and a preview section that shows generated quiz questions with a gradient card design.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "AI Quiz Generator (/generate)",
+          "Topic input field with suggestions",
+          "Difficulty selector",
+          "Question type checkboxes",
+          "Number of questions slider (5-50)",
+          "Language selection dropdown",
+          "Advanced options accordion",
+          "Generate button with loading animation",
+          "Preview of generated quiz questions"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Topic suggestions appear as clickable chips",
+        "Difficulty selector highlights the active choice",
+        "Slider moves between 5 and 50 and displays the current value",
+        "Advanced options accordion expands and collapses",
+        "Clicking Generate shows a loading state then renders mock question cards"
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Create a Quiz Playing Interface (/quiz/:id) with: a distraction-free layout with a dark mode toggle; prominent question text; a countdown timer with circular SVG progress indicator that turns red when under 10 seconds; answer option cards with hover and selected states; a progress bar showing 'Question X of N'; Previous/Next navigation; a flag question button; a live score display; a power-ups bar (50/50, Skip, Extra Time) in Kahoot style; an adaptive difficulty indicator badge; and smooth CSS animations between questions. Use mock quiz data.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Quiz Playing Interface (/quiz/:id)",
+          "Countdown timer with circular progress (color changes red when <10s)",
+          "Power-ups bar (50/50, Skip, Extra Time) - Kahoot style",
+          "Smooth animations between questions"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Circular timer counts down and turns red below 10 seconds",
+        "Selecting an answer card visually highlights it",
+        "Progress bar updates with each question navigation",
+        "Power-up buttons are present and clickable (UI only)",
+        "Dark mode toggle switches the layout color scheme"
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Create a Results Page (/results) with: a large animated score number and letter grade; a stats row (correct, incorrect, time taken, accuracy %); topic analysis breakdown with labeled progress bars; an AI feedback section with personalized text insights; a weak areas list with recommendations; a mini performance trend chart; recommended next quizzes cards; Share and Retake buttons; and a confetti animation that triggers for scores above 80%.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Results Page (/results)",
+          "Score display with large animated number and grade",
+          "AI feedback section with personalized insights",
+          "Confetti animation for high scores"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Score number animates counting up on page load",
+        "Topic analysis shows at least 3 topics with progress bars",
+        "AI feedback section renders mock personalized text",
+        "Confetti animation fires for mock scores ≥ 80%",
+        "Retake button navigates back to /quiz/:id"
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Create a Quiz Library page (/library) with: a search bar; a filter sidebar (Subject, Difficulty, Popularity, AI Recommended, Recently Added); a quiz cards grid showing title, topic, question count, star rating, play button, and difficulty badge; a featured quizzes carousel at the top; and category tabs. Populate with at least 10 mock quizzes.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Quiz Library (/library)",
+          "Filter sidebar: Subject, Difficulty, Popularity",
+          "Quiz cards grid: title, topic, question count, rating stars, play button, difficulty badge",
+          "Featured quizzes carousel at top",
+          "Category tabs"
+        ]
+      },
+      "acceptanceCriteria": [
+        "At least 10 quiz cards are visible in the grid",
+        "Featured carousel shows at least 3 quizzes and is scrollable",
+        "Search bar filters the displayed quiz cards",
+        "Category tabs switch the visible quiz set",
+        "Difficulty badges are color-coded"
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "text": "Create a Leaderboard page (/leaderboard) with: a global ranking table (rank, avatar, name, XP, quizzes, accuracy); Friends and Weekly Challenge tabs; a top-3 podium display with gold/silver/bronze medals; the current user's own rank highlighted; and a weekly challenge countdown timer. Populate with at least 10 mock users.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Leaderboard (/leaderboard)",
+          "Global ranking table with rank, avatar, name, XP, quizzes, accuracy",
+          "Top 3 podium display with medals",
+          "Weekly challenge countdown timer"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Podium renders ranks 1, 2, 3 visually elevated",
+        "Table shows at least 10 mock users",
+        "Current user row is visually highlighted",
+        "Countdown timer displays decreasing time",
+        "Friends and Weekly tabs switch the leaderboard view"
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "text": "Create an Achievements page (/achievements) with: a badges grid with earned (colored) and locked (greyed-out) states and descriptions; a streak tracker with a calendar heatmap visualization; a level progress bar showing XP to next level; and achievement categories (Learning, Streak, Social, Speed) as filter tabs. Populate with a mix of earned and locked mock achievements.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Achievements (/achievements)",
+          "Badges grid with earned/locked states and descriptions",
+          "Streak tracker with calendar heatmap",
+          "Level progress bar with XP to next level",
+          "Achievement categories: Learning, Streak, Social, Speed"
+        ]
+      },
+      "acceptanceCriteria": [
+        "At least 12 badge cards are shown with earned/locked visual distinction",
+        "Calendar heatmap renders cells for the past 12 weeks",
+        "XP progress bar shows current level and points to next level",
+        "Category tabs filter the displayed badges"
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "text": "Create a Manual Quiz Creator page (/create-quiz) with a multi-step form flow: Step 1 – Quiz details (title, description, subject, difficulty); Step 2 – Add questions (question text, answer options, correct answer selector, question type selector, difficulty per question, drag handles for reordering, question bank search to add existing questions, Import CSV button); Step 3 – Review and Publish. Show a step indicator at the top.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Quiz Creator - Manual (/create-quiz)",
+          "Multi-step form: Quiz details → Add questions → Review/Publish",
+          "Question reordering drag handles",
+          "Import CSV button",
+          "Question bank search to add existing questions"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Step indicator shows the current step highlighted",
+        "Next/Back buttons navigate between steps",
+        "Questions can be added and display in a list",
+        "Drag handles are present on each question card",
+        "Review step summarizes all entered data before publishing"
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "text": "Create a Question Bank page (/question-bank) with: a searchable, filterable table of questions (topic, difficulty, question type columns); filter controls for topic, difficulty, and question type; edit/delete/tag action buttons per row; bulk operation checkboxes with a bulk-action toolbar; an 'Add to Quiz' button per row; and a difficulty distribution donut/bar chart (Recharts). Populate with at least 20 mock questions.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Question Bank (/question-bank)",
+          "Searchable table of all questions",
+          "Filters: topic, difficulty, question type",
+          "Edit/delete/tag actions",
+          "Bulk operations",
+          "Difficulty distribution chart"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Table displays at least 20 mock questions",
+        "Search field filters the table rows in real-time",
+        "Bulk checkboxes allow selecting multiple rows and a bulk-action toolbar appears",
+        "Difficulty distribution chart renders with Recharts"
+      ]
+    },
+    {
+      "id": "REQ-13",
+      "text": "Create an Analytics Dashboard page (/analytics) with: a date range picker; KPI cards (avg score, completion rate, total attempts, improvement rate); a line chart for performance over time; a bar chart for scores by topic/subject; a pie chart for question type distribution (all using Recharts); a student progress table; and an Export to CSV button. Populate with realistic mock data.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Analytics Dashboard (/analytics)",
+          "Date range picker",
+          "KPI cards: avg score, completion rate, total attempts, improvement rate",
+          "Line chart: performance over time",
+          "Bar chart: scores by topic/subject",
+          "Pie chart: question type distribution",
+          "Export to CSV button"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Four KPI cards display mock metric values",
+        "Three distinct Recharts charts are visible",
+        "Date range picker UI is interactive",
+        "Student progress table shows at least 8 mock students",
+        "Export CSV button is present (UI only)"
+      ]
+    },
+    {
+      "id": "REQ-14",
+      "text": "Create a Pricing Page (/pricing) with: three tier cards (Free, Pro at $9.99/mo, Enterprise with custom pricing); a full feature comparison table; a monthly/annual billing toggle showing 20% discount for annual; an FAQ accordion section; and CTA buttons on each plan. This page should be accessible without authentication.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Pricing Page (/pricing)",
+          "Three tier cards: Free, Pro ($9.99/mo), Enterprise (custom)",
+          "Feature comparison table",
+          "Monthly/Annual toggle (save 20%)",
+          "FAQ section"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Three pricing cards are shown side-by-side (or stacked on mobile)",
+        "Toggling to Annual updates the Pro price to reflect 20% savings",
+        "Feature comparison table lists at least 8 features across the three plans",
+        "FAQ accordion expands/collapses individual questions"
+      ]
+    },
+    {
+      "id": "REQ-15",
+      "text": "Create a Profile Page (/profile) with: a user avatar with an upload button (UI only); an editable profile form (name, email, bio); a stats summary (quizzes taken, avg score, total XP); a recent activity feed; notification preference toggles; and account settings (change password link, delete account link).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Profile Page (/profile)",
+          "Avatar with upload button",
+          "Edit profile form",
+          "Stats summary",
+          "Recent activity",
+          "Notification preferences",
+          "Account settings"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Profile form fields are editable and show mock default values",
+        "Stats summary shows at least 3 mock metrics",
+        "Notification preference toggles switch between on/off",
+        "Recent activity feed lists at least 5 mock events"
+      ]
+    },
+    {
+      "id": "REQ-16",
+      "text": "Implement application-wide navigation: a persistent dark sidebar for authenticated pages with links to Dashboard, Generate Quiz, Quiz Library, Leaderboard, Achievements, Analytics, and Profile, each with a Lucide icon and label; role-based display (student vs teacher sidebar items); a top navbar with user avatar, notifications bell, and XP display; and a separate landing page header with Login/Signup CTA buttons. Include a hamburger menu for mobile viewports. Configure React Router to connect all 15+ page routes.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Persistent sidebar for authenticated pages",
+          "Role-based navigation (student vs teacher views)",
+          "Top navbar with user avatar, notifications bell, XP display",
+          "Landing page has separate header with Login/Signup CTAs",
+          "Mobile-responsive with hamburger menu"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Sidebar is visible on all authenticated pages and collapses to hamburger on mobile",
+        "All 15+ routes are registered and navigable without 404 errors",
+        "Top navbar shows mock avatar, notification bell, and XP value",
+        "Landing page header shows Login and Signup buttons that navigate to /login and /signup"
+      ]
+    },
+    {
+      "id": "REQ-17",
+      "text": "Apply a consistent design system across all pages: primary purple/violet gradient (#7C3AED to #4F46E5) with cyan/teal accents; cards with rounded-xl corners and subtle box shadows; smooth CSS transitions and micro-animations on interactive elements; loading skeleton states for data-heavy sections; and toast notification components for user actions. Ensure all pages are mobile-responsive.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Primary color: Purple/Violet gradient (#7C3AED to #4F46E5)",
+          "Accent: Cyan/Teal for highlights",
+          "Cards with subtle shadows and rounded corners (rounded-xl)",
+          "Smooth transitions and micro-animations",
+          "Loading skeletons for data states",
+          "Toast notifications for actions"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Purple/violet gradient is applied to primary buttons and key UI elements",
+        "Cyan/teal accents appear on highlights and badges",
+        "Skeleton loaders appear during simulated loading states",
+        "Toast notifications display for mock actions (e.g., quiz saved, profile updated)",
+        "All pages render without horizontal overflow on a 375px mobile viewport"
+      ]
+    }
+  ],
+  "constraints": [
+    "All authentication is UI-only with mock data — no real backend auth integration required",
+    "AI quiz generation is simulated with mock data — no real AI API calls",
+    "All backend Motoko logic must remain in the single main actor in backend/main.mo",
+    "Do not edit any files listed in frontend.immutablePaths",
+    "Use Recharts for all analytics and chart components",
+    "Use Lucide React for all icons throughout the application"
+  ],
+  "nonGoals": [
+    "Real AI/LLM integration for quiz generation",
+    "Real payment processing for the pricing page",
+    "Real-time WebSocket features",
+    "Email or SMS notifications",
+    "PDF parsing/upload backend processing",
+    "Voice input functionality (button UI only)",
+    "CSV export with actual file download logic",
+    "Internet Identity or any real authentication"
+  ],
+  "imageRequirements": {
+    "required": [
+      "Abstract AI brain/neural network illustration for hero section, vibrant purple and cyan tones on dark background (hero-brain.dim_1200x600.png)",
+      "Cartoon-style trophy and medal illustration for leaderboard podium, gold silver bronze metallic finish (leaderboard-trophy.dim_400x400.png)",
+      "Geometric achievement badge collection icons, 12 distinct badge shapes in purple cyan and gold (achievement-badges.dim_800x400.png)",
+      "Abstract flowing gradient background texture, deep purple to indigo with subtle cyan light rays (gradient-bg.dim_1920x1080.png)"
+    ],
+    "edits": []
+  }
+}

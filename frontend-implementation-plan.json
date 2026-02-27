@@ -1,0 +1,835 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Comprehensive AI Quiz Platform – Full Frontend Application",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Create a comprehensive Landing Page with animated gradient hero, features section, how-it-works, demo quiz preview, stats, testimonials, pricing, and footer",
+      "acceptanceCriteria": [
+        "Animated gradient background is visible in the hero section",
+        "CTA buttons navigate to /generate and quiz flow",
+        "Demo quiz preview renders a sample question with selectable options",
+        "Pricing section shows Free, Pro ($9.99/mo), and Enterprise tiers",
+        "Page is fully responsive on mobile and desktop"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/Landing.tsx",
+          "operation": "create",
+          "description": "Create the Landing page component with animated gradient hero section featuring the generated hero-brain image from frontend/public/assets/generated/hero-brain.dim_1200x600.png, sub-headline, and CTA buttons linking to /generate and /quiz/:id. Include features section with AI generation, adaptive difficulty, and analytics cards using Lucide icons. Add 3-step 'How It Works' section with icons, interactive demo quiz preview with sample MCQ question and selectable answer cards, stats section showing mock users/quizzes/accuracy metrics, student/teacher testimonial cards, pricing comparison section with Free/Pro/Enterprise tiers, and footer with navigation links."
+        },
+        {
+          "path": "frontend/src/components/landing/HeroSection.tsx",
+          "operation": "create",
+          "description": "Create HeroSection component with animated purple-to-violet gradient background, headline 'AI Quiz Generator', sub-headline text, and two CTA buttons (Start Quiz → /quiz/demo, Generate Quiz → /generate). Display the generated hero-brain image from frontend/public/assets/generated/hero-brain.dim_1200x600.png as a background or decorative element. Apply smooth fade-in animations using CSS transitions."
+        },
+        {
+          "path": "frontend/src/components/landing/FeaturesSection.tsx",
+          "operation": "create",
+          "description": "Create FeaturesSection component with three feature cards: AI Generation (with Lucide Sparkles icon), Adaptive Difficulty (with Lucide TrendingUp icon), and Analytics (with Lucide BarChart icon). Use rounded-xl cards with subtle shadows and hover animations."
+        },
+        {
+          "path": "frontend/src/components/landing/HowItWorks.tsx",
+          "operation": "create",
+          "description": "Create HowItWorks component displaying three steps with Lucide icons: Step 1 (Select Topic), Step 2 (AI Generates), Step 3 (Take Quiz). Use numbered badges and vertical/horizontal flow depending on viewport."
+        },
+        {
+          "path": "frontend/src/components/landing/DemoQuizPreview.tsx",
+          "operation": "create",
+          "description": "Create DemoQuizPreview component rendering a single sample MCQ question with four answer option cards. Each option card should have hover and selected states. Mock data: 'What is the capital of France?' with options Paris (correct), London, Berlin, Madrid."
+        },
+        {
+          "path": "frontend/src/components/landing/StatsSection.tsx",
+          "operation": "create",
+          "description": "Create StatsSection component with three stat cards displaying mock data: 10,000+ Users, 50,000+ Quizzes Generated, 94% Average Accuracy. Use large animated numbers with count-up effect."
+        },
+        {
+          "path": "frontend/src/components/landing/TestimonialsSection.tsx",
+          "operation": "create",
+          "description": "Create TestimonialsSection component with at least four testimonial cards (two student, two teacher) including avatar, name, role, and quote. Use rounded-xl cards with subtle shadows."
+        },
+        {
+          "path": "frontend/src/components/landing/PricingSection.tsx",
+          "operation": "create",
+          "description": "Create PricingSection component with three pricing tier cards: Free (0), Pro ($9.99/mo), Enterprise (Custom). Each card lists key features with checkmarks and a CTA button. Highlight Pro tier with cyan accent border."
+        },
+        {
+          "path": "frontend/src/components/landing/Footer.tsx",
+          "operation": "create",
+          "description": "Create Footer component with navigation links (About, Features, Pricing, Contact), social media icons (Lucide), and copyright text. Use dark background with light text."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Create Login and Signup pages with animated role selection and clean form design",
+      "acceptanceCriteria": [
+        "Login page renders with email, password fields and a submit button",
+        "Signup page shows three role selection cards with distinct icons",
+        "Selecting a role visually highlights the chosen card",
+        "Both pages link to each other and to the landing page"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/Login.tsx",
+          "operation": "create",
+          "description": "Create Login page with centered card design containing email and password input fields, a primary submit button, a Google login button (UI only with Google icon), and a 'Forgot password?' link. Include a link to /signup. Use shadcn/ui Input and Button components."
+        },
+        {
+          "path": "frontend/src/pages/Signup.tsx",
+          "operation": "create",
+          "description": "Create Signup page with animated role selection cards for Student (Lucide GraduationCap), Teacher (Lucide Users), and Admin (Lucide Shield). When a role is selected, highlight the card with cyan border and show the registration form below with name, email, password fields, and a terms acceptance checkbox. Include animated transitions between selections and a link to /login."
+        },
+        {
+          "path": "frontend/src/components/auth/RoleCard.tsx",
+          "operation": "create",
+          "description": "Create RoleCard component accepting icon, role name, and selected state as props. Apply hover effects, scale animations, and cyan border when selected."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Create Student Dashboard with welcome header, recent quizzes, performance stats, leaderboard widget, and weekly chart",
+      "acceptanceCriteria": [
+        "Dashboard renders mock user name, XP level, and streak",
+        "Weekly performance line chart is visible and uses Recharts",
+        "Leaderboard widget shows at least 5 mock users with XP scores",
+        "Quick action buttons are clickable and navigate to relevant routes"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/StudentDashboard.tsx",
+          "operation": "create",
+          "description": "Create StudentDashboard page with a welcome header showing mock user name 'Alex Morgan' and XP level 'Level 12'. Include a 'Continue Last Quiz' card linking to /quiz/last, a recent quizzes list showing 5 mock quizzes with scores, an AI-recommended quizzes section with 3 cards, performance stats (7-day streak, 42 quizzes completed, 87% accuracy, 3,450 XP), a leaderboard widget showing top 5 users, a weekly performance line chart using Recharts, and quick action buttons (Generate Quiz → /generate, Browse Library → /library)."
+        },
+        {
+          "path": "frontend/src/components/dashboard/WelcomeHeader.tsx",
+          "operation": "create",
+          "description": "Create WelcomeHeader component displaying user name, XP level, and greeting text with animated fade-in. Use gradient text for XP level."
+        },
+        {
+          "path": "frontend/src/components/dashboard/ContinueQuizCard.tsx",
+          "operation": "create",
+          "description": "Create ContinueQuizCard component with quiz title, progress percentage, and a 'Continue' button linking to /quiz/:id. Use gradient background and hover effect."
+        },
+        {
+          "path": "frontend/src/components/dashboard/RecentQuizzesList.tsx",
+          "operation": "create",
+          "description": "Create RecentQuizzesList component rendering 5 mock quiz entries with title, score, date, and a 'Review' button. Use list layout with subtle dividers."
+        },
+        {
+          "path": "frontend/src/components/dashboard/AIRecommendedQuizzes.tsx",
+          "operation": "create",
+          "description": "Create AIRecommendedQuizzes component showing 3 recommended quiz cards with title, topic, difficulty badge, and a 'Start' button. Use Lucide Sparkles icon to indicate AI recommendation."
+        },
+        {
+          "path": "frontend/src/components/dashboard/PerformanceStats.tsx",
+          "operation": "create",
+          "description": "Create PerformanceStats component displaying four stat cards: streak (7 days with Lucide Flame icon), quizzes completed (42 with Lucide CheckCircle), accuracy (87% with Lucide Target), and XP (3,450 with Lucide Zap). Use rounded-xl cards with icons and gradient accents."
+        },
+        {
+          "path": "frontend/src/components/dashboard/LeaderboardWidget.tsx",
+          "operation": "create",
+          "description": "Create LeaderboardWidget component showing top 5 mock users with rank, avatar, name, and XP score. Highlight rank 1, 2, 3 with gold, silver, bronze indicators. Include a 'View Full Leaderboard' link to /leaderboard."
+        },
+        {
+          "path": "frontend/src/components/dashboard/WeeklyPerformanceChart.tsx",
+          "operation": "create",
+          "description": "Create WeeklyPerformanceChart component using Recharts LineChart to display mock weekly performance data (7 days with varying scores). Use purple gradient fill and smooth curve."
+        },
+        {
+          "path": "frontend/src/components/dashboard/QuickActions.tsx",
+          "operation": "create",
+          "description": "Create QuickActions component with two large buttons: 'Generate Quiz' (→ /generate) and 'Browse Library' (→ /library). Use gradient backgrounds and Lucide icons."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Create Teacher/Admin Dashboard with stat cards, quiz management table, analytics charts, and activity feed",
+      "acceptanceCriteria": [
+        "Four KPI stat cards are visible at the top",
+        "Quiz management table shows at least 5 mock quizzes with edit/delete buttons",
+        "Bar chart and line chart render using Recharts with mock data",
+        "Recent activity feed lists at least 5 mock events"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/TeacherDashboard.tsx",
+          "operation": "create",
+          "description": "Create TeacherDashboard page with four KPI stat cards (Total Students: 156, Quizzes Created: 23, Avg Score: 84%, Completion Rate: 92%), a 'Create Quiz' quick action button linking to /create-quiz, a manage-quizzes table showing 5 mock quizzes with edit/delete action buttons, a student performance overview section, a bar chart for topic scores and a line chart for weekly activity using Recharts, a question bank summary panel linking to /question-bank, and a recent activity feed with 5 mock events."
+        },
+        {
+          "path": "frontend/src/components/teacher/KPICards.tsx",
+          "operation": "create",
+          "description": "Create KPICards component rendering four stat cards with icons: Total Students (Lucide Users), Quizzes Created (Lucide FileText), Avg Score (Lucide TrendingUp), Completion Rate (Lucide CheckCircle). Use gradient accents and large numbers."
+        },
+        {
+          "path": "frontend/src/components/teacher/ManageQuizzesTable.tsx",
+          "operation": "create",
+          "description": "Create ManageQuizzesTable component displaying 5 mock quizzes with columns: Title, Subject, Questions, Status, Created Date, and Actions (Edit/Delete buttons with Lucide icons). Use shadcn/ui Table component with hover effects."
+        },
+        {
+          "path": "frontend/src/components/teacher/StudentPerformanceOverview.tsx",
+          "operation": "create",
+          "description": "Create StudentPerformanceOverview component showing a summary of student performance metrics with average scores by class/group. Use small stat cards with trend indicators."
+        },
+        {
+          "path": "frontend/src/components/teacher/TopicScoresChart.tsx",
+          "operation": "create",
+          "description": "Create TopicScoresChart component using Recharts BarChart to display mock average scores across 5 topics (Math: 87%, Science: 82%, History: 90%, English: 85%, Geography: 78%). Use purple gradient bars."
+        },
+        {
+          "path": "frontend/src/components/teacher/WeeklyActivityChart.tsx",
+          "operation": "create",
+          "description": "Create WeeklyActivityChart component using Recharts LineChart to display mock weekly quiz activity data (7 days with varying completion counts). Use cyan line color."
+        },
+        {
+          "path": "frontend/src/components/teacher/QuestionBankSummary.tsx",
+          "operation": "create",
+          "description": "Create QuestionBankSummary component showing total questions count (145) and a breakdown by type (MCQ, True/False, Fill-in-blanks). Include a 'Manage Question Bank' button linking to /question-bank."
+        },
+        {
+          "path": "frontend/src/components/teacher/RecentActivityFeed.tsx",
+          "operation": "create",
+          "description": "Create RecentActivityFeed component listing 5 mock recent events (e.g., 'Student completed Quiz A', 'New quiz created'). Use timeline-style layout with timestamps and Lucide icons."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Create AI Quiz Generator page with topic input, difficulty selector, question type checkboxes, slider, language dropdown, advanced options, and preview",
+      "acceptanceCriteria": [
+        "Topic suggestions appear as clickable chips",
+        "Difficulty selector highlights the active choice",
+        "Slider moves between 5 and 50 and displays the current value",
+        "Advanced options accordion expands and collapses",
+        "Clicking Generate shows a loading state then renders mock question cards"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/GenerateQuiz.tsx",
+          "operation": "create",
+          "description": "Create GenerateQuiz page with a topic input field with 5 suggestion chips (Math, Science, History, Technology, Literature), a difficulty selector with four options (Easy/Medium/Hard/Expert) showing visual indicators, question type checkboxes (MCQ, True/False, Fill in blanks, Coding questions), a number-of-questions slider (5-50) displaying current value, a language selection dropdown with 10+ languages, an advanced options accordion containing a PDF upload button (UI only), a 'Generate from text' textarea, and a voice input button (UI only). Include a Generate button that shows a loading spinner animation and then displays a preview section with 3 mock generated question cards in gradient card design."
+        },
+        {
+          "path": "frontend/src/components/generate/TopicInput.tsx",
+          "operation": "create",
+          "description": "Create TopicInput component with a text input field and 5 suggestion chips below it. Clicking a chip fills the input. Use shadcn/ui Input and custom chip buttons with hover effects."
+        },
+        {
+          "path": "frontend/src/components/generate/DifficultySelector.tsx",
+          "operation": "create",
+          "description": "Create DifficultySelector component with four button options (Easy/Medium/Hard/Expert), each with a distinct color indicator (green/yellow/orange/red). Highlight the selected option with a cyan border and scale animation."
+        },
+        {
+          "path": "frontend/src/components/generate/QuestionTypeCheckboxes.tsx",
+          "operation": "create",
+          "description": "Create QuestionTypeCheckboxes component with four checkbox options (MCQ, True/False, Fill in blanks, Coding questions). Use shadcn/ui Checkbox component with labels and Lucide icons."
+        },
+        {
+          "path": "frontend/src/components/generate/QuestionCountSlider.tsx",
+          "operation": "create",
+          "description": "Create QuestionCountSlider component using shadcn/ui Slider with min 5, max 50, step 5. Display the current value prominently above or beside the slider."
+        },
+        {
+          "path": "frontend/src/components/generate/LanguageSelector.tsx",
+          "operation": "create",
+          "description": "Create LanguageSelector component using shadcn/ui Select dropdown with 10+ language options (English, Spanish, French, German, Chinese, Japanese, Arabic, Hindi, Portuguese, Russian, etc.)."
+        },
+        {
+          "path": "frontend/src/components/generate/AdvancedOptions.tsx",
+          "operation": "create",
+          "description": "Create AdvancedOptions component using shadcn/ui Accordion. Inside, include a PDF upload button (with Lucide Upload icon, UI only), a 'Generate from text' textarea (shadcn/ui Textarea), and a voice input button (with Lucide Mic icon, UI only)."
+        },
+        {
+          "path": "frontend/src/components/generate/GenerateButton.tsx",
+          "operation": "create",
+          "description": "Create GenerateButton component with a primary button displaying 'Generate Quiz'. When clicked, show a loading spinner animation (Lucide Loader icon spinning) for 2 seconds, then emit an event to display the preview section."
+        },
+        {
+          "path": "frontend/src/components/generate/QuizPreview.tsx",
+          "operation": "create",
+          "description": "Create QuizPreview component displaying 3 mock generated question cards with gradient backgrounds. Each card shows question number, question text, question type, and difficulty badge. Include a 'Start Quiz' button linking to /quiz/generated."
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Create Quiz Playing Interface with dark mode toggle, countdown timer, answer cards, progress bar, power-ups bar, and smooth animations",
+      "acceptanceCriteria": [
+        "Circular timer counts down and turns red below 10 seconds",
+        "Selecting an answer card visually highlights it",
+        "Progress bar updates with each question navigation",
+        "Power-up buttons are present and clickable (UI only)",
+        "Dark mode toggle switches the layout color scheme"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/QuizPlay.tsx",
+          "operation": "create",
+          "description": "Create QuizPlay page (/quiz/:id) with a distraction-free layout, a dark mode toggle button in the top-right, prominent question text, a circular SVG countdown timer that turns red when under 10 seconds, four answer option cards with hover and selected states, a progress bar showing 'Question X of N', Previous/Next navigation buttons, a flag question button (Lucide Flag icon), a live score display, a power-ups bar with three buttons (50/50, Skip, Extra Time in Kahoot style with icons), an adaptive difficulty indicator badge, and smooth CSS animations between questions. Use mock quiz data with 10 questions."
+        },
+        {
+          "path": "frontend/src/components/quiz/DarkModeToggle.tsx",
+          "operation": "create",
+          "description": "Create DarkModeToggle component with a button (Lucide Sun/Moon icon) that toggles a 'dark' class on the page root. Use smooth color transitions."
+        },
+        {
+          "path": "frontend/src/components/quiz/QuestionDisplay.tsx",
+          "operation": "create",
+          "description": "Create QuestionDisplay component showing the current question number, question text in large font, and question type badge. Use fade-in animation when question changes."
+        },
+        {
+          "path": "frontend/src/components/quiz/CircularTimer.tsx",
+          "operation": "create",
+          "description": "Create CircularTimer component with an SVG circle that depletes as time counts down. Display remaining seconds in the center. Turn the circle stroke red when time is under 10 seconds. Use smooth SVG stroke-dashoffset animation."
+        },
+        {
+          "path": "frontend/src/components/quiz/AnswerOptions.tsx",
+          "operation": "create",
+          "description": "Create AnswerOptions component rendering four answer option cards (A, B, C, D). Apply hover scale effect and highlight selected option with cyan border. Use smooth transitions."
+        },
+        {
+          "path": "frontend/src/components/quiz/ProgressBar.tsx",
+          "operation": "create",
+          "description": "Create ProgressBar component showing 'Question X of N' text and a filled progress bar. Use gradient fill and smooth width transition."
+        },
+        {
+          "path": "frontend/src/components/quiz/QuizNavigation.tsx",
+          "operation": "create",
+          "description": "Create QuizNavigation component with Previous and Next buttons (with Lucide ChevronLeft/ChevronRight icons). Disable Previous on first question and show 'Submit Quiz' instead of Next on last question."
+        },
+        {
+          "path": "frontend/src/components/quiz/FlagButton.tsx",
+          "operation": "create",
+          "description": "Create FlagButton component with a button (Lucide Flag icon) that toggles flagged state. Change icon color to red when flagged."
+        },
+        {
+          "path": "frontend/src/components/quiz/LiveScore.tsx",
+          "operation": "create",
+          "description": "Create LiveScore component displaying current score count. Use large bold numbers with gradient text."
+        },
+        {
+          "path": "frontend/src/components/quiz/PowerUpsBar.tsx",
+          "operation": "create",
+          "description": "Create PowerUpsBar component with three power-up buttons in Kahoot style: 50/50 (Lucide Zap icon, removes 2 wrong answers), Skip (Lucide SkipForward icon, skip question), Extra Time (Lucide Clock icon, add 30s). Use vibrant colors and hover effects. UI only."
+        },
+        {
+          "path": "frontend/src/components/quiz/DifficultyBadge.tsx",
+          "operation": "create",
+          "description": "Create DifficultyBadge component showing adaptive difficulty level (Easy/Medium/Hard) with color-coded badge. Display in top-right of quiz interface."
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "summary": "Create Results Page with animated score, stats, topic analysis, AI feedback, weak areas, trend chart, recommendations, and confetti",
+      "acceptanceCriteria": [
+        "Score number animates counting up on page load",
+        "Topic analysis shows at least 3 topics with progress bars",
+        "AI feedback section renders mock personalized text",
+        "Confetti animation fires for mock scores ≥ 80%",
+        "Retake button navigates back to /quiz/:id"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/Results.tsx",
+          "operation": "create",
+          "description": "Create Results page with a large animated score number counting up to 85% and displaying letter grade 'B+', a stats row showing correct (17), incorrect (3), time taken (8m 32s), and accuracy (85%), a topic analysis breakdown with 3 labeled progress bars (Math: 90%, Science: 80%, History: 85%), an AI feedback section with personalized mock text insights, a weak areas list with 2 recommendations, a mini performance trend chart using Recharts, 3 recommended next quiz cards, Share and Retake buttons, and a confetti animation that triggers on page load for scores ≥ 80%."
+        },
+        {
+          "path": "frontend/src/components/results/ScoreDisplay.tsx",
+          "operation": "create",
+          "description": "Create ScoreDisplay component with a large number that animates counting up from 0 to the final score using a counter animation. Display letter grade (A+/A/B+/B/C/D/F) next to it. Use gradient text for score."
+        },
+        {
+          "path": "frontend/src/components/results/StatsRow.tsx",
+          "operation": "create",
+          "description": "Create StatsRow component displaying four stat cards: Correct (17 with Lucide CheckCircle), Incorrect (3 with Lucide XCircle), Time Taken (8m 32s with Lucide Clock), Accuracy (85% with Lucide Target). Use icon colors and rounded cards."
+        },
+        {
+          "path": "frontend/src/components/results/TopicAnalysis.tsx",
+          "operation": "create",
+          "description": "Create TopicAnalysis component showing 3 topics (Math, Science, History) with labeled progress bars. Use color-coded bars (green for high, yellow for medium, red for low). Display percentage on each bar."
+        },
+        {
+          "path": "frontend/src/components/results/AIFeedback.tsx",
+          "operation": "create",
+          "description": "Create AIFeedback component with a card containing mock personalized AI feedback text: 'Great job! You showed strong understanding of Math concepts. Consider reviewing Science topics where you scored lower.' Use Lucide Sparkles icon and gradient border."
+        },
+        {
+          "path": "frontend/src/components/results/WeakAreasList.tsx",
+          "operation": "create",
+          "description": "Create WeakAreasList component listing 2 weak areas with recommendations: 'Science - Review cellular biology' and 'History - Study World War II timeline'. Use list layout with Lucide AlertCircle icons."
+        },
+        {
+          "path": "frontend/src/components/results/PerformanceTrendChart.tsx",
+          "operation": "create",
+          "description": "Create PerformanceTrendChart component using Recharts LineChart to display mini performance trend over last 5 quizzes (mock data: 75%, 80%, 78%, 85%, 85%). Use small chart dimensions."
+        },
+        {
+          "path": "frontend/src/components/results/RecommendedQuizzes.tsx",
+          "operation": "create",
+          "description": "Create RecommendedQuizzes component showing 3 quiz recommendation cards with title, topic, difficulty badge, and a 'Start' button. Use gradient card backgrounds."
+        },
+        {
+          "path": "frontend/src/components/results/ActionButtons.tsx",
+          "operation": "create",
+          "description": "Create ActionButtons component with two buttons: Share (Lucide Share2 icon, UI only) and Retake (Lucide RotateCcw icon, links to /quiz/:id). Use gradient backgrounds."
+        },
+        {
+          "path": "frontend/src/components/results/ConfettiAnimation.tsx",
+          "operation": "create",
+          "description": "Create ConfettiAnimation component that triggers a confetti animation (using CSS keyframes or a lightweight library) when score is ≥ 80%. Animation should play once on page load."
+        }
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "summary": "Create Quiz Library page with search, filter sidebar, quiz cards grid, featured carousel, and category tabs",
+      "acceptanceCriteria": [
+        "At least 10 quiz cards are visible in the grid",
+        "Featured carousel shows at least 3 quizzes and is scrollable",
+        "Search bar filters the displayed quiz cards",
+        "Category tabs switch the visible quiz set",
+        "Difficulty badges are color-coded"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/QuizLibrary.tsx",
+          "operation": "create",
+          "description": "Create QuizLibrary page with a search bar at the top, a filter sidebar on the left (Subject, Difficulty, Popularity, AI Recommended, Recently Added), a quiz cards grid displaying 10 mock quizzes with title, topic, question count, star rating, play button, and color-coded difficulty badge, a featured quizzes carousel at the top showing 3 quizzes, and category tabs (All, Math, Science, History, Technology) above the grid."
+        },
+        {
+          "path": "frontend/src/components/library/SearchBar.tsx",
+          "operation": "create",
+          "description": "Create SearchBar component with a text input (shadcn/ui Input) and a Lucide Search icon. On input change, emit a search event to filter quiz cards."
+        },
+        {
+          "path": "frontend/src/components/library/FilterSidebar.tsx",
+          "operation": "create",
+          "description": "Create FilterSidebar component with filter sections: Subject (dropdown), Difficulty (checkboxes for Easy/Medium/Hard/Expert), Popularity (dropdown), AI Recommended (toggle), Recently Added (toggle). Use shadcn/ui components with collapsible sections."
+        },
+        {
+          "path": "frontend/src/components/library/QuizCard.tsx",
+          "operation": "create",
+          "description": "Create QuizCard component displaying quiz title, topic tag, question count (with Lucide FileQuestion icon), star rating (Lucide Star icons), a 'Play' button linking to /quiz/:id, and a color-coded difficulty badge. Use rounded-xl card with hover scale effect."
+        },
+        {
+          "path": "frontend/src/components/library/QuizGrid.tsx",
+          "operation": "create",
+          "description": "Create QuizGrid component rendering 10 mock quiz cards in a responsive grid (3 columns on desktop, 2 on tablet, 1 on mobile). Apply filtering and search logic."
+        },
+        {
+          "path": "frontend/src/components/library/FeaturedCarousel.tsx",
+          "operation": "create",
+          "description": "Create FeaturedCarousel component displaying 3 featured quiz cards in a horizontal scrollable carousel. Each card shows title, topic, and a large 'Play' button. Use smooth scroll behavior."
+        },
+        {
+          "path": "frontend/src/components/library/CategoryTabs.tsx",
+          "operation": "create",
+          "description": "Create CategoryTabs component with 5 tabs (All, Math, Science, History, Technology). Clicking a tab filters the quiz grid. Highlight active tab with cyan underline."
+        }
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "summary": "Create Leaderboard page with global ranking table, Friends and Weekly tabs, top-3 podium, highlighted current user rank, and countdown timer",
+      "acceptanceCriteria": [
+        "Podium renders ranks 1, 2, 3 visually elevated",
+        "Table shows at least 10 mock users",
+        "Current user row is visually highlighted",
+        "Countdown timer displays decreasing time",
+        "Friends and Weekly tabs switch the leaderboard view"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/Leaderboard.tsx",
+          "operation": "create",
+          "description": "Create Leaderboard page with a top-3 podium display using the generated leaderboard-trophy image from frontend/public/assets/generated/leaderboard-trophy.dim_400x400.png for ranks 1, 2, 3 with gold/silver/bronze medal indicators, a global ranking table showing 10 mock users with columns (rank, avatar, name, XP, quizzes, accuracy), Friends and Weekly Challenge tabs, the current user's row highlighted with cyan background, and a weekly challenge countdown timer showing time remaining until next reset."
+        },
+        {
+          "path": "frontend/src/components/leaderboard/PodiumDisplay.tsx",
+          "operation": "create",
+          "description": "Create PodiumDisplay component rendering top 3 users on podium with ranks 2-1-3 layout (1st is tallest in center). Use generated leaderboard-trophy image from frontend/public/assets/generated/leaderboard-trophy.dim_400x400.png as a decorative element. Display gold, silver, bronze medal icons and user avatars. Use gradient backgrounds for each podium step."
+        },
+        {
+          "path": "frontend/src/components/leaderboard/RankingTable.tsx",
+          "operation": "create",
+          "description": "Create RankingTable component displaying 10 mock users with columns: Rank (#), Avatar (circular), Name, XP, Quizzes Completed, Accuracy (%). Highlight the current user row (rank 7) with cyan background. Use shadcn/ui Table component."
+        },
+        {
+          "path": "frontend/src/components/leaderboard/LeaderboardTabs.tsx",
+          "operation": "create",
+          "description": "Create LeaderboardTabs component with two tabs: Global and Friends and Weekly Challenge. Clicking a tab switches the displayed leaderboard data. Use shadcn/ui Tabs component."
+        },
+        {
+          "path": "frontend/src/components/leaderboard/CountdownTimer.tsx",
+          "operation": "create",
+          "description": "Create CountdownTimer component displaying time remaining until next weekly challenge reset (e.g., '4d 12h 35m 22s'). Use countdown logic with useEffect and setInterval. Display with Lucide Clock icon."
+        }
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "summary": "Create Achievements page with badges grid, streak tracker with calendar heatmap, level progress bar, and category filter tabs",
+      "acceptanceCriteria": [
+        "At least 12 badge cards are shown with earned/locked visual distinction",
+        "Calendar heatmap renders cells for the past 12 weeks",
+        "XP progress bar shows current level and points to next level",
+        "Category tabs filter the displayed badges"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/Achievements.tsx",
+          "operation": "create",
+          "description": "Create Achievements page with a badges grid using the generated achievement-badges image from frontend/public/assets/generated/achievement-badges.dim_800x400.png as a visual reference or background. Display 12 mock achievement badges with earned (colored) and locked (greyed-out) states and descriptions, a streak tracker with a calendar heatmap visualization for the past 12 weeks, a level progress bar showing current level (12) and XP to next level (3,450/4,000 XP), and achievement category filter tabs (All, Learning, Streak, Social, Speed)."
+        },
+        {
+          "path": "frontend/src/components/achievements/BadgeCard.tsx",
+          "operation": "create",
+          "description": "Create BadgeCard component displaying badge icon, title, and description. Apply colored styling for earned badges and greyed-out styling with a lock icon (Lucide Lock) for locked badges. Use hover effect for earned badges."
+        },
+        {
+          "path": "frontend/src/components/achievements/BadgesGrid.tsx",
+          "operation": "create",
+          "description": "Create BadgesGrid component rendering 12 mock achievement badge cards in a responsive grid (4 columns on desktop, 3 on tablet, 2 on mobile). Mix earned and locked badges. Use the generated achievement-badges image from frontend/public/assets/generated/achievement-badges.dim_800x400.png as inspiration for badge icon design."
+        },
+        {
+          "path": "frontend/src/components/achievements/StreakTracker.tsx",
+          "operation": "create",
+          "description": "Create StreakTracker component with a calendar heatmap visualization showing the past 12 weeks (84 days). Each cell represents a day and is color-coded based on activity (no activity: grey, low: light purple, high: dark purple). Display current streak count (7 days) with Lucide Flame icon."
+        },
+        {
+          "path": "frontend/src/components/achievements/LevelProgress.tsx",
+          "operation": "create",
+          "description": "Create LevelProgress component showing current level (12), XP progress bar (3,450/4,000 XP), and XP percentage. Use gradient fill for progress bar and display level badge icon."
+        },
+        {
+          "path": "frontend/src/components/achievements/CategoryTabs.tsx",
+          "operation": "create",
+          "description": "Create CategoryTabs component with 5 tabs (All, Learning, Streak, Social, Speed). Clicking a tab filters the badges grid. Use shadcn/ui Tabs component."
+        }
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "summary": "Create Manual Quiz Creator page with multi-step form flow for quiz details, adding questions, and review/publish",
+      "acceptanceCriteria": [
+        "Step indicator shows the current step highlighted",
+        "Next/Back buttons navigate between steps",
+        "Questions can be added and display in a list",
+        "Drag handles are present on each question card",
+        "Review step summarizes all entered data before publishing"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/CreateQuiz.tsx",
+          "operation": "create",
+          "description": "Create CreateQuiz page with a multi-step form flow. Step 1: Quiz details (title, description, subject dropdown, difficulty selector). Step 2: Add questions (question text input, answer options inputs, correct answer selector radio buttons, question type dropdown, difficulty per question selector, drag handles for reordering using a library like dnd-kit or react-beautiful-dnd, question bank search modal to add existing questions, Import CSV button UI only). Step 3: Review and Publish (summary of all entered data with edit links, Publish button linking to /teacher-dashboard). Show a step indicator at the top with steps 1, 2, 3 and Next/Back navigation buttons."
+        },
+        {
+          "path": "frontend/src/components/create-quiz/StepIndicator.tsx",
+          "operation": "create",
+          "description": "Create StepIndicator component displaying 3 steps with labels (Quiz Details, Add Questions, Review). Highlight the current step with a gradient circle and show completed steps with a checkmark icon. Use connecting lines between steps."
+        },
+        {
+          "path": "frontend/src/components/create-quiz/QuizDetailsForm.tsx",
+          "operation": "create",
+          "description": "Create QuizDetailsForm component (Step 1) with fields: Title (input), Description (textarea), Subject (dropdown with 5 options), Difficulty (selector with Easy/Medium/Hard/Expert). Use shadcn/ui components."
+        },
+        {
+          "path": "frontend/src/components/create-quiz/AddQuestionsForm.tsx",
+          "operation": "create",
+          "description": "Create AddQuestionsForm component (Step 2) with an 'Add Question' button that adds a new question card to a list. Each question card includes: question text input, 4 answer option inputs, correct answer radio selector, question type dropdown (MCQ, True/False, Fill-in-blanks), difficulty selector, and a drag handle icon (Lucide GripVertical). Include a 'Question Bank Search' button that opens a modal and an 'Import CSV' button (UI only)."
+        },
+        {
+          "path": "frontend/src/components/create-quiz/QuestionCard.tsx",
+          "operation": "create",
+          "description": "Create QuestionCard component displaying question number, drag handle, question text input, answer options inputs, correct answer selector, question type dropdown, difficulty selector, and a delete button (Lucide Trash). Use rounded-xl card with shadow."
+        },
+        {
+          "path": "frontend/src/components/create-quiz/QuestionBankModal.tsx",
+          "operation": "create",
+          "description": "Create QuestionBankModal component (shadcn/ui Dialog) with a search input and a list of 5 mock existing questions with 'Add' buttons. Clicking Add inserts the question into the quiz."
+        },
+        {
+          "path": "frontend/src/components/create-quiz/ReviewStep.tsx",
+          "operation": "create",
+          "description": "Create ReviewStep component (Step 3) displaying a summary of quiz details and all added questions in read-only cards. Include edit links for each section and a 'Publish Quiz' button that navigates to /teacher-dashboard with a success toast notification."
+        },
+        {
+          "path": "frontend/src/components/create-quiz/StepNavigation.tsx",
+          "operation": "create",
+          "description": "Create StepNavigation component with Back and Next buttons. Disable Back on step 1. On step 3, show 'Publish' instead of Next. Handle step transitions and validation (UI only)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "summary": "Create Question Bank page with searchable/filterable table, edit/delete/tag actions, bulk operations, and difficulty distribution chart",
+      "acceptanceCriteria": [
+        "Table displays at least 20 mock questions",
+        "Search field filters the table rows in real-time",
+        "Bulk checkboxes allow selecting multiple rows and a bulk-action toolbar appears",
+        "Difficulty distribution chart renders with Recharts"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/QuestionBank.tsx",
+          "operation": "create",
+          "description": "Create QuestionBank page with a search input at the top, filter controls for topic (dropdown), difficulty (checkboxes), and question type (checkboxes), a table displaying 20 mock questions with columns (checkbox, question preview, topic, difficulty badge, question type, actions), edit/delete/tag action buttons per row (Lucide icons), bulk operation checkboxes with a bulk-action toolbar (appears when 1+ rows selected) with Bulk Delete/Bulk Tag buttons, an 'Add to Quiz' button per row, and a difficulty distribution chart (Recharts BarChart or PieChart) showing counts for Easy/Medium/Hard/Expert."
+        },
+        {
+          "path": "frontend/src/components/question-bank/SearchBar.tsx",
+          "operation": "create",
+          "description": "Create SearchBar component with a text input (shadcn/ui Input) and Lucide Search icon. On input change, emit a search event to filter the questions table."
+        },
+        {
+          "path": "frontend/src/components/question-bank/FilterControls.tsx",
+          "operation": "create",
+          "description": "Create FilterControls component with three filter sections: Topic (dropdown), Difficulty (checkboxes), Question Type (checkboxes). Use shadcn/ui components and emit filter events."
+        },
+        {
+          "path": "frontend/src/components/question-bank/QuestionsTable.tsx",
+          "operation": "create",
+          "description": "Create QuestionsTable component displaying 20 mock questions with columns: Checkbox (for bulk selection), Question (preview text), Topic, Difficulty (color-coded badge), Type, Actions (Edit/Delete/Tag buttons with Lucide icons, Add to Quiz button). Use shadcn/ui Table component with hover effects."
+        },
+        {
+          "path": "frontend/src/components/question-bank/BulkActionToolbar.tsx",
+          "operation": "create",
+          "description": "Create BulkActionToolbar component that appears above the table when 1+ rows are selected. Display selected count and Bulk Delete/Bulk Tag buttons with Lucide icons. UI only."
+        },
+        {
+          "path": "frontend/src/components/question-bank/DifficultyDistributionChart.tsx",
+          "operation": "create",
+          "description": "Create DifficultyDistributionChart component using Recharts BarChart or PieChart to display mock question counts by difficulty (Easy: 8, Medium: 7, Hard: 4, Expert: 1). Use color-coded bars/slices."
+        }
+      ]
+    },
+    {
+      "id": "REQ-13",
+      "summary": "Create Analytics Dashboard page with date range picker, KPI cards, performance charts, student progress table, and Export CSV button",
+      "acceptanceCriteria": [
+        "Four KPI cards display mock metric values",
+        "Three distinct Recharts charts are visible",
+        "Date range picker UI is interactive",
+        "Student progress table shows at least 8 mock students",
+        "Export CSV button is present (UI only)"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/Analytics.tsx",
+          "operation": "create",
+          "description": "Create Analytics page with a date range picker (shadcn/ui component or custom calendar) at the top, four KPI cards (Avg Score: 84%, Completion Rate: 92%, Total Attempts: 1,234, Improvement Rate: +12%), a line chart for performance over time (Recharts LineChart with 10 data points), a bar chart for scores by topic/subject (Recharts BarChart with 5 topics), a pie chart for question type distribution (Recharts PieChart with MCQ 60%, True/False 20%, Fill-in-blanks 15%, Coding 5%), a student progress table displaying 8 mock students with columns (Name, Quizzes Taken, Avg Score, Last Active), and an Export to CSV button (UI only with Lucide Download icon)."
+        },
+        {
+          "path": "frontend/src/components/analytics/DateRangePicker.tsx",
+          "operation": "create",
+          "description": "Create DateRangePicker component with two date inputs (From/To) or a calendar popover (shadcn/ui Popover + Calendar). Emit date range change events."
+        },
+        {
+          "path": "frontend/src/components/analytics/KPICards.tsx",
+          "operation": "create",
+          "description": "Create KPICards component displaying four stat cards: Avg Score (84% with Lucide TrendingUp), Completion Rate (92% with Lucide CheckCircle), Total Attempts (1,234 with Lucide Users), Improvement Rate (+12% with Lucide ArrowUp). Use gradient accents and large numbers."
+        },
+        {
+          "path": "frontend/src/components/analytics/PerformanceOverTimeChart.tsx",
+          "operation": "create",
+          "description": "Create PerformanceOverTimeChart component using Recharts LineChart to display mock performance data over 10 weeks (varying scores 75%-90%). Use purple line with gradient fill."
+        },
+        {
+          "path": "frontend/src/components/analytics/ScoresByTopicChart.tsx",
+          "operation": "create",
+          "description": "Create ScoresByTopicChart component using Recharts BarChart to display mock average scores for 5 topics (Math: 87%, Science: 82%, History: 90%, English: 85%, Geography: 78%). Use gradient bars."
+        },
+        {
+          "path": "frontend/src/components/analytics/QuestionTypeDistributionChart.tsx",
+          "operation": "create",
+          "description": "Create QuestionTypeDistributionChart component using Recharts PieChart to display mock question type distribution (MCQ 60%, True/False 20%, Fill-in-blanks 15%, Coding 5%). Use color-coded slices with labels."
+        },
+        {
+          "path": "frontend/src/components/analytics/StudentProgressTable.tsx",
+          "operation": "create",
+          "description": "Create StudentProgressTable component displaying 8 mock students with columns: Name, Quizzes Taken, Avg Score (%), Last Active (date). Use shadcn/ui Table component with hover effects."
+        },
+        {
+          "path": "frontend/src/components/analytics/ExportButton.tsx",
+          "operation": "create",
+          "description": "Create ExportButton component with a button (Lucide Download icon) labeled 'Export to CSV'. UI only, shows a toast notification 'CSV export feature coming soon' on click."
+        }
+      ]
+    },
+    {
+      "id": "REQ-14",
+      "summary": "Create Pricing Page with three tier cards, feature comparison table, monthly/annual toggle, and FAQ accordion",
+      "acceptanceCriteria": [
+        "Three pricing cards are shown side-by-side (or stacked on mobile)",
+        "Toggling to Annual updates the Pro price to reflect 20% savings",
+        "Feature comparison table lists at least 8 features across the three plans",
+        "FAQ accordion expands/collapses individual questions"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/Pricing.tsx",
+          "operation": "create",
+          "description": "Create Pricing page with three pricing tier cards (Free: $0, Pro: $9.99/mo, Enterprise: Custom), a full feature comparison table listing 8+ features (AI Quiz Generation, Adaptive Difficulty, Analytics Dashboard, Question Bank, Unlimited Quizzes, Priority Support, Custom Branding, API Access) with checkmarks/crosses for each plan, a monthly/annual billing toggle that shows 20% discount for annual ($95.90/year instead of $119.88), an FAQ accordion section with 5 questions and answers, and CTA buttons on each plan (Free: 'Get Started', Pro: 'Start Free Trial', Enterprise: 'Contact Sales'). This page should be accessible without authentication."
+        },
+        {
+          "path": "frontend/src/components/pricing/PricingCards.tsx",
+          "operation": "create",
+          "description": "Create PricingCards component rendering three pricing tier cards side-by-side (stacked on mobile). Each card displays plan name, price (with billing period), key features list with checkmarks, and a CTA button. Highlight Pro tier with cyan border and 'Most Popular' badge."
+        },
+        {
+          "path": "frontend/src/components/pricing/BillingToggle.tsx",
+          "operation": "create",
+          "description": "Create BillingToggle component with a toggle switch (shadcn/ui Switch) for Monthly/Annual. Display '20% savings' badge next to Annual. When toggled, emit event to update Pro price display."
+        },
+        {
+          "path": "frontend/src/components/pricing/FeatureComparisonTable.tsx",
+          "operation": "create",
+          "description": "Create FeatureComparisonTable component displaying 8+ features in rows and 3 plans in columns. Use Lucide Check/X icons to indicate feature availability. Use shadcn/ui Table component with sticky header."
+        },
+        {
+          "path": "frontend/src/components/pricing/FAQAccordion.tsx",
+          "operation": "create",
+          "description": "Create FAQAccordion component using shadcn/ui Accordion with 5 FAQ items. Each item has a question and answer. Apply smooth expand/collapse animations."
+        }
+      ]
+    },
+    {
+      "id": "REQ-15",
+      "summary": "Create Profile Page with editable profile form, stats summary, recent activity feed, notification preferences, and account settings",
+      "acceptanceCriteria": [
+        "Profile form fields are editable and show mock default values",
+        "Stats summary shows at least 3 mock metrics",
+        "Notification preference toggles switch between on/off",
+        "Recent activity feed lists at least 5 mock events"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/Profile.tsx",
+          "operation": "create",
+          "description": "Create Profile page with a user avatar (circular) with an upload button (UI only, Lucide Upload icon), an editable profile form with fields (Name: 'Alex Morgan', Email: 'alex@example.com', Bio: textarea), a stats summary showing Quizzes Taken (42), Avg Score (87%), Total XP (3,450), a recent activity feed listing 5 mock events (e.g., 'Completed Math Quiz', 'Earned Speed Demon badge'), notification preference toggles (Email Notifications, Quiz Reminders, Weekly Reports), and account settings links (Change Password, Delete Account) with Lucide icons."
+        },
+        {
+          "path": "frontend/src/components/profile/AvatarUpload.tsx",
+          "operation": "create",
+          "description": "Create AvatarUpload component with a circular avatar image and an 'Upload' button overlay (Lucide Upload icon). UI only, shows a toast notification 'Avatar upload feature coming soon' on click."
+        },
+        {
+          "path": "frontend/src/components/profile/ProfileForm.tsx",
+          "operation": "create",
+          "description": "Create ProfileForm component with editable fields (Name, Email, Bio) using shadcn/ui Input and Textarea. Show mock default values. Include a 'Save Changes' button that displays a success toast notification."
+        },
+        {
+          "path": "frontend/src/components/profile/StatsSummary.tsx",
+          "operation": "create",
+          "description": "Create StatsSummary component displaying three stat cards: Quizzes Taken (42 with Lucide FileQuestion), Avg Score (87% with Lucide Target), Total XP (3,450 with Lucide Zap). Use rounded cards with gradient accents."
+        },
+        {
+          "path": "frontend/src/components/profile/RecentActivityFeed.tsx",
+          "operation": "create",
+          "description": "Create RecentActivityFeed component listing 5 mock recent events with timestamps and icons. Use timeline-style layout with Lucide icons (CheckCircle, Trophy, Award)."
+        },
+        {
+          "path": "frontend/src/components/profile/NotificationPreferences.tsx",
+          "operation": "create",
+          "description": "Create NotificationPreferences component with three toggle switches (shadcn/ui Switch): Email Notifications, Quiz Reminders, Weekly Reports. Show labels and emit toggle events."
+        },
+        {
+          "path": "frontend/src/components/profile/AccountSettings.tsx",
+          "operation": "create",
+          "description": "Create AccountSettings component with two links: Change Password (Lucide Key icon, links to /change-password) and Delete Account (Lucide Trash icon, UI only with confirmation modal). Use text links with icons."
+        }
+      ]
+    },
+    {
+      "id": "REQ-16",
+      "summary": "Implement application-wide navigation with dark sidebar, top navbar, landing page header, hamburger menu, and React Router configuration for all routes",
+      "acceptanceCriteria": [
+        "Sidebar is visible on all authenticated pages and collapses to hamburger on mobile",
+        "All 15+ routes are registered and navigable without 404 errors",
+        "Top navbar shows mock avatar, notification bell, and XP value",
+        "Landing page header shows Login and Signup buttons that navigate to /login and /signup"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/layout/Sidebar.tsx",
+          "operation": "create",
+          "description": "Create Sidebar component with a persistent dark background for authenticated pages. Include navigation links with Lucide icons and labels: Dashboard (Home icon), Generate Quiz (Sparkles icon), Quiz Library (Library icon), Leaderboard (Trophy icon), Achievements (Award icon), Analytics (BarChart icon), Profile (User icon). Implement role-based display: show Create Quiz (FilePlus icon), Question Bank (Database icon), and Teacher Dashboard (LayoutDashboard icon) only for teacher/admin roles. Collapse to hamburger menu on mobile viewports (<768px). Use smooth transitions."
+        },
+        {
+          "path": "frontend/src/components/layout/TopNavbar.tsx",
+          "operation": "create",
+          "description": "Create TopNavbar component for authenticated pages with a dark mode toggle (Lucide Sun/Moon icon), user avatar (circular, clickable dropdown menu with Profile/Logout links), notifications bell (Lucide Bell icon with red badge showing count '3'), and XP display ('3,450 XP' with Lucide Zap icon and gradient text). Use sticky positioning."
+        },
+        {
+          "path": "frontend/src/components/layout/LandingHeader.tsx",
+          "operation": "create",
+          "description": "Create LandingHeader component for the landing page with logo/brand name on the left, navigation links (Features, How It Works, Pricing) in the center, and Login/Signup CTA buttons on the right linking to /login and /signup. Use transparent background with backdrop blur. Make responsive with hamburger menu on mobile."
+        },
+        {
+          "path": "frontend/src/components/layout/HamburgerMenu.tsx",
+          "operation": "create",
+          "description": "Create HamburgerMenu component (button with Lucide Menu icon) that toggles the sidebar visibility on mobile viewports. Use smooth slide-in/slide-out animations."
+        },
+        {
+          "path": "frontend/src/components/layout/AuthenticatedLayout.tsx",
+          "operation": "create",
+          "description": "Create AuthenticatedLayout component that wraps authenticated pages with Sidebar, TopNavbar, and a main content area. Use flexbox layout with sidebar on the left and content area taking remaining space."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Modify App.tsx to configure React Router with all 15+ page routes: / (Landing), /login (Login), /signup (Signup), /dashboard (StudentDashboard), /teacher-dashboard (TeacherDashboard), /generate (GenerateQuiz), /quiz/:id (QuizPlay), /results (Results), /library (QuizLibrary), /leaderboard (Leaderboard), /achievements (Achievements), /create-quiz (CreateQuiz), /question-bank (QuestionBank), /analytics (Analytics), /pricing (Pricing), /profile (Profile). Wrap authenticated routes with AuthenticatedLayout. Verify the core-infrastructure component's entry point integration and ensure routing works correctly."
+        }
+      ]
+    },
+    {
+      "id": "REQ-17",
+      "summary": "Apply consistent design system with purple/violet gradient, cyan accents, rounded cards, smooth animations, loading skeletons, and toast notifications across all pages",
+      "acceptanceCriteria": [
+        "Purple/violet gradient is applied to primary buttons and key UI elements",
+        "Cyan/teal accents appear on highlights and badges",
+        "Skeleton loaders appear during simulated loading states",
+        "Toast notifications display for mock actions (e.g., quiz saved, profile updated)",
+        "All pages render without horizontal overflow on a 375px mobile viewport"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Modify frontend/src/index.css to define CSS custom properties for the design system: primary purple/violet gradient (#7C3AED to #4F46E5), cyan/teal accent (#06B6D4), card styles with rounded-xl corners (border-radius: 0.75rem) and subtle box shadows (box-shadow: 0 4px 6px rgba(0,0,0,0.1)), smooth CSS transitions for interactive elements (transition: all 0.3s ease), and mobile-responsive breakpoints. Ensure no horizontal overflow on 375px viewports. Use the generated gradient-bg image from frontend/public/assets/generated/gradient-bg.dim_1920x1080.png as a background texture for key sections where appropriate."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Modify frontend/tailwind.config.js to extend the theme with custom colors: primary purple (#7C3AED), secondary purple (#4F46E5), accent cyan (#06B6D4), and custom gradient utilities. Add rounded-xl (0.75rem) to borderRadius. Configure responsive breakpoints for mobile (375px), tablet (768px), and desktop (1024px)."
+        },
+        {
+          "path": "frontend/src/components/ui/LoadingSkeleton.tsx",
+          "operation": "create",
+          "description": "Create LoadingSkeleton component using shadcn/ui Skeleton for data-heavy sections. Create variants for card skeletons, table row skeletons, and chart skeletons. Use animated pulse effect."
+        },
+        {
+          "path": "frontend/src/components/ui/Toast.tsx",
+          "operation": "create",
+          "description": "Create Toast notification component (or use shadcn/ui Toast/Sonner) for user actions. Configure success (green), error (red), info (cyan), and warning (yellow) variants. Display with slide-in animation from top-right. Include close button (Lucide X icon)."
+        },
+        {
+          "path": "frontend/src/hooks/useToast.ts",
+          "operation": "create",
+          "description": "Create useToast custom hook that provides a showToast function for displaying toast notifications throughout the app. Integrate with Toast component and manage toast queue."
+        },
+        {
+          "path": "frontend/src/utils/animations.ts",
+          "operation": "create",
+          "description": "Create animations utility file defining reusable CSS-in-JS animation objects for fade-in, slide-in, scale, and count-up animations. Export animation variants for use with framer-motion or CSS animations."
+        }
+      ]
+    }
+  ]
+}

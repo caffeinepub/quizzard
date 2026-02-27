@@ -1,0 +1,317 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-landing-page-with-animated-gradient-hero-section-with-ai-quiz-generator-headline-sub-headline-and-cta-buttons-start-quiz-generate-quiz-features-section-with-ai-generation-adaptive-difficulty-and-analytics-cards-3-step-how-it-works-section-with-icons-interactive-demo-quiz-preview-with-a-sample-question-stats-section-showing-users-count-quizzes-generated-and-accuracy-rate-student-teacher-testimonials-pricing-section-free-pro-enterprise-with-feature-comparison-and-a-footer-with-navigation-links-fully-responsive",
+      "featureTitle": "Create a Landing Page (/) with: animated gradient hero section with 'AI Quiz Generator' headline, sub-headline, and CTA buttons (Start Quiz, Generate Quiz); features section with AI generation, adaptive difficulty, and analytics cards; 3-step 'How It Works' section with icons; interactive demo quiz preview with a sample question; stats section showing users count, quizzes generated, and accuracy rate; student/teacher testimonials; pricing section (Free/Pro/Enterprise) with feature comparison; and a footer with navigation links. Fully responsive.",
+      "files": [
+        "frontend/src/pages/Landing.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-login-page-login-with-an-email-password-form-a-google-login-button-ui-only-no-real-auth-a-forgot-password-link-and-a-clean-card-design-create-a-signup-page-signup-with-animated-role-selection-cards-student-teacher-admin-with-icons-name-email-password-fields-a-terms-acceptance-checkbox-and-animated-transitions-between-role-selections",
+      "featureTitle": "Create a Login page (/login) with an email/password form, a Google login button (UI only, no real auth), a 'Forgot password' link, and a clean card design. Create a Signup page (/signup) with animated role selection cards (Student / Teacher / Admin) with icons, name/email/password fields, a terms acceptance checkbox, and animated transitions between role selections.",
+      "files": [
+        "frontend/src/pages/Login.tsx",
+        "frontend/src/pages/Signup.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-student-dashboard-dashboard-with-a-welcome-header-showing-user-name-and-xp-level-a-continue-last-quiz-card-a-recent-quizzes-list-with-scores-an-ai-recommended-quizzes-section-performance-stats-streak-quizzes-completed-accuracy-xp-points-a-leaderboard-widget-showing-the-top-5-users-a-weekly-performance-line-chart-recharts-and-quick-action-buttons-populate-with-realistic-mock-data",
+      "featureTitle": "Create a Student Dashboard (/dashboard) with: a welcome header showing user name and XP level; a 'Continue Last Quiz' card; a recent quizzes list with scores; an AI-recommended quizzes section; performance stats (streak, quizzes completed, accuracy, XP points); a leaderboard widget showing the top 5 users; a weekly performance line chart (Recharts); and quick action buttons. Populate with realistic mock data.",
+      "files": [
+        "frontend/src/pages/StudentDashboard.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-teacher-admin-dashboard-teacher-dashboard-with-stat-overview-cards-total-students-quizzes-created-avg-score-completion-rate-a-create-quiz-quick-action-a-manage-quizzes-table-with-edit-delete-actions-a-student-performance-overview-a-bar-chart-for-topic-scores-and-a-line-chart-for-weekly-activity-recharts-a-question-bank-summary-panel-and-a-recent-activity-feed-populate-with-realistic-mock-data",
+      "featureTitle": "Create a Teacher/Admin Dashboard (/teacher-dashboard) with: stat overview cards (total students, quizzes created, avg score, completion rate); a Create Quiz quick action; a manage-quizzes table with edit/delete actions; a student performance overview; a bar chart for topic scores and a line chart for weekly activity (Recharts); a question bank summary panel; and a recent activity feed. Populate with realistic mock data.",
+      "files": [
+        "frontend/src/pages/TeacherDashboard.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-an-ai-quiz-generator-page-generate-with-a-topic-input-field-with-suggestion-chips-a-difficulty-selector-easy-medium-hard-expert-with-visual-indicators-question-type-checkboxes-mcq-true-false-fill-in-blanks-coding-questions-a-number-of-questions-slider-5-50-a-language-selection-dropdown-10-languages-an-advanced-options-accordion-containing-a-pdf-upload-button-a-generate-from-text-textarea-and-a-voice-input-button-a-generate-button-with-a-loading-spinner-animation-and-a-preview-section-that-shows-generated-quiz-questions-with-a-gradient-card-design",
+      "featureTitle": "Create an AI Quiz Generator page (/generate) with: a topic input field with suggestion chips; a difficulty selector (Easy/Medium/Hard/Expert) with visual indicators; question type checkboxes (MCQ, True/False, Fill in blanks, Coding questions); a number-of-questions slider (5–50); a language selection dropdown (10+ languages); an advanced options accordion containing a PDF upload button, a 'Generate from text' textarea, and a voice input button; a Generate button with a loading spinner animation; and a preview section that shows generated quiz questions with a gradient card design.",
+      "files": [
+        "frontend/src/pages/GenerateQuiz.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-quiz-playing-interface-quiz-id-with-a-distraction-free-layout-with-a-dark-mode-toggle-prominent-question-text-a-countdown-timer-with-circular-svg-progress-indicator-that-turns-red-when-under-10-seconds-answer-option-cards-with-hover-and-selected-states-a-progress-bar-showing-question-x-of-n-previous-next-navigation-a-flag-question-button-a-live-score-display-a-power-ups-bar-50-50-skip-extra-time-in-kahoot-style-an-adaptive-difficulty-indicator-badge-and-smooth-css-animations-between-questions-use-mock-quiz-data",
+      "featureTitle": "Create a Quiz Playing Interface (/quiz/:id) with: a distraction-free layout with a dark mode toggle; prominent question text; a countdown timer with circular SVG progress indicator that turns red when under 10 seconds; answer option cards with hover and selected states; a progress bar showing 'Question X of N'; Previous/Next navigation; a flag question button; a live score display; a power-ups bar (50/50, Skip, Extra Time) in Kahoot style; an adaptive difficulty indicator badge; and smooth CSS animations between questions. Use mock quiz data.",
+      "files": [
+        "frontend/src/pages/QuizPlay.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-results-page-results-with-a-large-animated-score-number-and-letter-grade-a-stats-row-correct-incorrect-time-taken-accuracy-topic-analysis-breakdown-with-labeled-progress-bars-an-ai-feedback-section-with-personalized-text-insights-a-weak-areas-list-with-recommendations-a-mini-performance-trend-chart-recommended-next-quizzes-cards-share-and-retake-buttons-and-a-confetti-animation-that-triggers-for-scores-above-80",
+      "featureTitle": "Create a Results Page (/results) with: a large animated score number and letter grade; a stats row (correct, incorrect, time taken, accuracy %); topic analysis breakdown with labeled progress bars; an AI feedback section with personalized text insights; a weak areas list with recommendations; a mini performance trend chart; recommended next quizzes cards; Share and Retake buttons; and a confetti animation that triggers for scores above 80%.",
+      "files": [
+        "frontend/src/pages/Results.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-quiz-library-page-library-with-a-search-bar-a-filter-sidebar-subject-difficulty-popularity-ai-recommended-recently-added-a-quiz-cards-grid-showing-title-topic-question-count-star-rating-play-button-and-difficulty-badge-a-featured-quizzes-carousel-at-the-top-and-category-tabs-populate-with-at-least-10-mock-quizzes",
+      "featureTitle": "Create a Quiz Library page (/library) with: a search bar; a filter sidebar (Subject, Difficulty, Popularity, AI Recommended, Recently Added); a quiz cards grid showing title, topic, question count, star rating, play button, and difficulty badge; a featured quizzes carousel at the top; and category tabs. Populate with at least 10 mock quizzes.",
+      "files": [
+        "frontend/src/pages/QuizLibrary.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-8"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-leaderboard-page-leaderboard-with-a-global-ranking-table-rank-avatar-name-xp-quizzes-accuracy-friends-and-weekly-challenge-tabs-a-top-3-podium-display-with-gold-silver-bronze-medals-the-current-user-s-own-rank-highlighted-and-a-weekly-challenge-countdown-timer-populate-with-at-least-10-mock-users",
+      "featureTitle": "Create a Leaderboard page (/leaderboard) with: a global ranking table (rank, avatar, name, XP, quizzes, accuracy); Friends and Weekly Challenge tabs; a top-3 podium display with gold/silver/bronze medals; the current user's own rank highlighted; and a weekly challenge countdown timer. Populate with at least 10 mock users.",
+      "files": [
+        "frontend/src/pages/Leaderboard.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-9"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-an-achievements-page-achievements-with-a-badges-grid-with-earned-colored-and-locked-greyed-out-states-and-descriptions-a-streak-tracker-with-a-calendar-heatmap-visualization-a-level-progress-bar-showing-xp-to-next-level-and-achievement-categories-learning-streak-social-speed-as-filter-tabs-populate-with-a-mix-of-earned-and-locked-mock-achievements",
+      "featureTitle": "Create an Achievements page (/achievements) with: a badges grid with earned (colored) and locked (greyed-out) states and descriptions; a streak tracker with a calendar heatmap visualization; a level progress bar showing XP to next level; and achievement categories (Learning, Streak, Social, Speed) as filter tabs. Populate with a mix of earned and locked mock achievements.",
+      "files": [
+        "frontend/src/pages/Achievements.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-10"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-manual-quiz-creator-page-create-quiz-with-a-multi-step-form-flow-step-1-quiz-details-title-description-subject-difficulty-step-2-add-questions-question-text-answer-options-correct-answer-selector-question-type-selector-difficulty-per-question-drag-handles-for-reordering-question-bank-search-to-add-existing-questions-import-csv-button-step-3-review-and-publish-show-a-step-indicator-at-the-top",
+      "featureTitle": "Create a Manual Quiz Creator page (/create-quiz) with a multi-step form flow: Step 1 – Quiz details (title, description, subject, difficulty); Step 2 – Add questions (question text, answer options, correct answer selector, question type selector, difficulty per question, drag handles for reordering, question bank search to add existing questions, Import CSV button); Step 3 – Review and Publish. Show a step indicator at the top.",
+      "files": [
+        "frontend/src/pages/CreateQuiz.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-11"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-question-bank-page-question-bank-with-a-searchable-filterable-table-of-questions-topic-difficulty-question-type-columns-filter-controls-for-topic-difficulty-and-question-type-edit-delete-tag-action-buttons-per-row-bulk-operation-checkboxes-with-a-bulk-action-toolbar-an-add-to-quiz-button-per-row-and-a-difficulty-distribution-donut-bar-chart-recharts-populate-with-at-least-20-mock-questions",
+      "featureTitle": "Create a Question Bank page (/question-bank) with: a searchable, filterable table of questions (topic, difficulty, question type columns); filter controls for topic, difficulty, and question type; edit/delete/tag action buttons per row; bulk operation checkboxes with a bulk-action toolbar; an 'Add to Quiz' button per row; and a difficulty distribution donut/bar chart (Recharts). Populate with at least 20 mock questions.",
+      "files": [
+        "frontend/src/pages/QuestionBank.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-12"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-an-analytics-dashboard-page-analytics-with-a-date-range-picker-kpi-cards-avg-score-completion-rate-total-attempts-improvement-rate-a-line-chart-for-performance-over-time-a-bar-chart-for-scores-by-topic-subject-a-pie-chart-for-question-type-distribution-all-using-recharts-a-student-progress-table-and-an-export-to-csv-button-populate-with-realistic-mock-data",
+      "featureTitle": "Create an Analytics Dashboard page (/analytics) with: a date range picker; KPI cards (avg score, completion rate, total attempts, improvement rate); a line chart for performance over time; a bar chart for scores by topic/subject; a pie chart for question type distribution (all using Recharts); a student progress table; and an Export to CSV button. Populate with realistic mock data.",
+      "files": [
+        "frontend/src/pages/Analytics.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-13"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-pricing-page-pricing-with-three-tier-cards-free-pro-at-9-99-mo-enterprise-with-custom-pricing-a-full-feature-comparison-table-a-monthly-annual-billing-toggle-showing-20-discount-for-annual-an-faq-accordion-section-and-cta-buttons-on-each-plan-this-page-should-be-accessible-without-authentication",
+      "featureTitle": "Create a Pricing Page (/pricing) with: three tier cards (Free, Pro at $9.99/mo, Enterprise with custom pricing); a full feature comparison table; a monthly/annual billing toggle showing 20% discount for annual; an FAQ accordion section; and CTA buttons on each plan. This page should be accessible without authentication.",
+      "files": [
+        "frontend/src/pages/Pricing.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-14"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-profile-page-profile-with-a-user-avatar-with-an-upload-button-ui-only-an-editable-profile-form-name-email-bio-a-stats-summary-quizzes-taken-avg-score-total-xp-a-recent-activity-feed-notification-preference-toggles-and-account-settings-change-password-link-delete-account-link",
+      "featureTitle": "Create a Profile Page (/profile) with: a user avatar with an upload button (UI only); an editable profile form (name, email, bio); a stats summary (quizzes taken, avg score, total XP); a recent activity feed; notification preference toggles; and account settings (change password link, delete account link).",
+      "files": [
+        "frontend/src/pages/Profile.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-15"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-application-wide-navigation-a-persistent-dark-sidebar-for-authenticated-pages-with-links-to-dashboard-generate-quiz-quiz-library-leaderboard-achievements-analytics-and-profile-each-with-a-lucide-icon-and-label-role-based-display-student-vs-teacher-sidebar-items-a-top-navbar-with-user-avatar-notifications-bell-and-xp-display-and-a-separate-landing-page-header-with-login-signup-cta-buttons-include-a-hamburger-menu-for-mobile-viewports-configure-react-router-to-connect-all-15-page-routes",
+      "featureTitle": "Implement application-wide navigation: a persistent dark sidebar for authenticated pages with links to Dashboard, Generate Quiz, Quiz Library, Leaderboard, Achievements, Analytics, and Profile, each with a Lucide icon and label; role-based display (student vs teacher sidebar items); a top navbar with user avatar, notifications bell, and XP display; and a separate landing page header with Login/Signup CTA buttons. Include a hamburger menu for mobile viewports. Configure React Router to connect all 15+ page routes.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/layout/AuthenticatedLayout.tsx",
+        "frontend/src/components/layout/LandingHeader.tsx",
+        "frontend/src/components/layout/Sidebar.tsx",
+        "frontend/src/components/layout/TopNavbar.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-16"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-apply-a-consistent-design-system-across-all-pages-primary-purple-violet-gradient-7c3aed-to-4f46e5-with-cyan-teal-accents-cards-with-rounded-xl-corners-and-subtle-box-shadows-smooth-css-transitions-and-micro-animations-on-interactive-elements-loading-skeleton-states-for-data-heavy-sections-and-toast-notification-components-for-user-actions-ensure-all-pages-are-mobile-responsive",
+      "featureTitle": "Apply a consistent design system across all pages: primary purple/violet gradient (#7C3AED to #4F46E5) with cyan/teal accents; cards with rounded-xl corners and subtle box shadows; smooth CSS transitions and micro-animations on interactive elements; loading skeleton states for data-heavy sections; and toast notification components for user actions. Ensure all pages are mobile-responsive.",
+      "files": [
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-17"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

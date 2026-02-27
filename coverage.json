@@ -1,0 +1,439 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-27T18:07:12.961Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 17,
+    "implemented": 17,
+    "items": [
+      {
+        "id": "REQ-1",
+        "summary": "Create a Landing Page (/) with: animated gradient hero section with 'AI Quiz Generator' headline, sub-headline, and CTA buttons (Start Quiz, Generate Quiz); features section with AI generation, adaptive difficulty, and analytics cards; 3-step 'How It Works' section with icons; interactive demo quiz preview with a sample question; stats section showing users count, quizzes generated, and accuracy rate; student/teacher testimonials; pricing section (Free/Pro/Enterprise) with feature comparison; and a footer with navigation links. Fully responsive.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/Landing.tsx",
+          "frontend/src/components/landing/HeroSection.tsx",
+          "frontend/src/components/landing/FeaturesSection.tsx",
+          "frontend/src/components/landing/HowItWorks.tsx",
+          "frontend/src/components/landing/DemoQuizPreview.tsx",
+          "frontend/src/components/landing/StatsSection.tsx",
+          "frontend/src/components/landing/TestimonialsSection.tsx",
+          "frontend/src/components/landing/PricingSection.tsx",
+          "frontend/src/components/landing/Footer.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/Landing.tsx"
+        ]
+      },
+      {
+        "id": "REQ-10",
+        "summary": "Create an Achievements page (/achievements) with: a badges grid with earned (colored) and locked (greyed-out) states and descriptions; a streak tracker with a calendar heatmap visualization; a level progress bar showing XP to next level; and achievement categories (Learning, Streak, Social, Speed) as filter tabs. Populate with a mix of earned and locked mock achievements.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/Achievements.tsx",
+          "frontend/src/components/achievements/BadgeCard.tsx",
+          "frontend/src/components/achievements/BadgesGrid.tsx",
+          "frontend/src/components/achievements/StreakTracker.tsx",
+          "frontend/src/components/achievements/LevelProgress.tsx",
+          "frontend/src/components/achievements/CategoryTabs.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/Achievements.tsx"
+        ]
+      },
+      {
+        "id": "REQ-11",
+        "summary": "Create a Manual Quiz Creator page (/create-quiz) with a multi-step form flow: Step 1 – Quiz details (title, description, subject, difficulty); Step 2 – Add questions (question text, answer options, correct answer selector, question type selector, difficulty per question, drag handles for reordering, question bank search to add existing questions, Import CSV button); Step 3 – Review and Publish. Show a step indicator at the top.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/CreateQuiz.tsx",
+          "frontend/src/components/create-quiz/StepIndicator.tsx",
+          "frontend/src/components/create-quiz/QuizDetailsForm.tsx",
+          "frontend/src/components/create-quiz/AddQuestionsForm.tsx",
+          "frontend/src/components/create-quiz/QuestionCard.tsx",
+          "frontend/src/components/create-quiz/QuestionBankModal.tsx",
+          "frontend/src/components/create-quiz/ReviewStep.tsx",
+          "frontend/src/components/create-quiz/StepNavigation.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/CreateQuiz.tsx"
+        ]
+      },
+      {
+        "id": "REQ-12",
+        "summary": "Create a Question Bank page (/question-bank) with: a searchable, filterable table of questions (topic, difficulty, question type columns); filter controls for topic, difficulty, and question type; edit/delete/tag action buttons per row; bulk operation checkboxes with a bulk-action toolbar; an 'Add to Quiz' button per row; and a difficulty distribution donut/bar chart (Recharts). Populate with at least 20 mock questions.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/QuestionBank.tsx",
+          "frontend/src/components/question-bank/SearchBar.tsx",
+          "frontend/src/components/question-bank/FilterControls.tsx",
+          "frontend/src/components/question-bank/QuestionsTable.tsx",
+          "frontend/src/components/question-bank/BulkActionToolbar.tsx",
+          "frontend/src/components/question-bank/DifficultyDistributionChart.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/QuestionBank.tsx"
+        ]
+      },
+      {
+        "id": "REQ-13",
+        "summary": "Create an Analytics Dashboard page (/analytics) with: a date range picker; KPI cards (avg score, completion rate, total attempts, improvement rate); a line chart for performance over time; a bar chart for scores by topic/subject; a pie chart for question type distribution (all using Recharts); a student progress table; and an Export to CSV button. Populate with realistic mock data.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/Analytics.tsx",
+          "frontend/src/components/analytics/DateRangePicker.tsx",
+          "frontend/src/components/analytics/KPICards.tsx",
+          "frontend/src/components/analytics/PerformanceOverTimeChart.tsx",
+          "frontend/src/components/analytics/ScoresByTopicChart.tsx",
+          "frontend/src/components/analytics/QuestionTypeDistributionChart.tsx",
+          "frontend/src/components/analytics/StudentProgressTable.tsx",
+          "frontend/src/components/analytics/ExportButton.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/Analytics.tsx"
+        ]
+      },
+      {
+        "id": "REQ-14",
+        "summary": "Create a Pricing Page (/pricing) with: three tier cards (Free, Pro at $9.99/mo, Enterprise with custom pricing); a full feature comparison table; a monthly/annual billing toggle showing 20% discount for annual; an FAQ accordion section; and CTA buttons on each plan. This page should be accessible without authentication.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/Pricing.tsx",
+          "frontend/src/components/pricing/PricingCards.tsx",
+          "frontend/src/components/pricing/BillingToggle.tsx",
+          "frontend/src/components/pricing/FeatureComparisonTable.tsx",
+          "frontend/src/components/pricing/FAQAccordion.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/Pricing.tsx"
+        ]
+      },
+      {
+        "id": "REQ-15",
+        "summary": "Create a Profile Page (/profile) with: a user avatar with an upload button (UI only); an editable profile form (name, email, bio); a stats summary (quizzes taken, avg score, total XP); a recent activity feed; notification preference toggles; and account settings (change password link, delete account link).",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/Profile.tsx",
+          "frontend/src/components/profile/AvatarUpload.tsx",
+          "frontend/src/components/profile/ProfileForm.tsx",
+          "frontend/src/components/profile/StatsSummary.tsx",
+          "frontend/src/components/profile/RecentActivityFeed.tsx",
+          "frontend/src/components/profile/NotificationPreferences.tsx",
+          "frontend/src/components/profile/AccountSettings.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/Profile.tsx"
+        ]
+      },
+      {
+        "id": "REQ-16",
+        "summary": "Implement application-wide navigation: a persistent dark sidebar for authenticated pages with links to Dashboard, Generate Quiz, Quiz Library, Leaderboard, Achievements, Analytics, and Profile, each with a Lucide icon and label; role-based display (student vs teacher sidebar items); a top navbar with user avatar, notifications bell, and XP display; and a separate landing page header with Login/Signup CTA buttons. Include a hamburger menu for mobile viewports. Configure React Router to connect all 15+ page routes.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/layout/Sidebar.tsx",
+          "frontend/src/components/layout/TopNavbar.tsx",
+          "frontend/src/components/layout/LandingHeader.tsx",
+          "frontend/src/components/layout/HamburgerMenu.tsx",
+          "frontend/src/components/layout/AuthenticatedLayout.tsx",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/layout/Sidebar.tsx",
+          "frontend/src/components/layout/TopNavbar.tsx",
+          "frontend/src/components/layout/LandingHeader.tsx",
+          "frontend/src/components/layout/AuthenticatedLayout.tsx",
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-17",
+        "summary": "Apply a consistent design system across all pages: primary purple/violet gradient (#7C3AED to #4F46E5) with cyan/teal accents; cards with rounded-xl corners and subtle box shadows; smooth CSS transitions and micro-animations on interactive elements; loading skeleton states for data-heavy sections; and toast notification components for user actions. Ensure all pages are mobile-responsive.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/index.css",
+          "frontend/tailwind.config.js",
+          "frontend/src/components/ui/LoadingSkeleton.tsx",
+          "frontend/src/components/ui/Toast.tsx",
+          "frontend/src/hooks/useToast.ts",
+          "frontend/src/utils/animations.ts"
+        ],
+        "matchedFiles": [
+          "frontend/src/index.css",
+          "frontend/tailwind.config.js"
+        ]
+      },
+      {
+        "id": "REQ-2",
+        "summary": "Create a Login page (/login) with an email/password form, a Google login button (UI only, no real auth), a 'Forgot password' link, and a clean card design. Create a Signup page (/signup) with animated role selection cards (Student / Teacher / Admin) with icons, name/email/password fields, a terms acceptance checkbox, and animated transitions between role selections.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/Login.tsx",
+          "frontend/src/pages/Signup.tsx",
+          "frontend/src/components/auth/RoleCard.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/Login.tsx",
+          "frontend/src/pages/Signup.tsx"
+        ]
+      },
+      {
+        "id": "REQ-3",
+        "summary": "Create a Student Dashboard (/dashboard) with: a welcome header showing user name and XP level; a 'Continue Last Quiz' card; a recent quizzes list with scores; an AI-recommended quizzes section; performance stats (streak, quizzes completed, accuracy, XP points); a leaderboard widget showing the top 5 users; a weekly performance line chart (Recharts); and quick action buttons. Populate with realistic mock data.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/StudentDashboard.tsx",
+          "frontend/src/components/dashboard/WelcomeHeader.tsx",
+          "frontend/src/components/dashboard/ContinueQuizCard.tsx",
+          "frontend/src/components/dashboard/RecentQuizzesList.tsx",
+          "frontend/src/components/dashboard/AIRecommendedQuizzes.tsx",
+          "frontend/src/components/dashboard/PerformanceStats.tsx",
+          "frontend/src/components/dashboard/LeaderboardWidget.tsx",
+          "frontend/src/components/dashboard/WeeklyPerformanceChart.tsx",
+          "frontend/src/components/dashboard/QuickActions.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/StudentDashboard.tsx"
+        ]
+      },
+      {
+        "id": "REQ-4",
+        "summary": "Create a Teacher/Admin Dashboard (/teacher-dashboard) with: stat overview cards (total students, quizzes created, avg score, completion rate); a Create Quiz quick action; a manage-quizzes table with edit/delete actions; a student performance overview; a bar chart for topic scores and a line chart for weekly activity (Recharts); a question bank summary panel; and a recent activity feed. Populate with realistic mock data.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/TeacherDashboard.tsx",
+          "frontend/src/components/teacher/KPICards.tsx",
+          "frontend/src/components/teacher/ManageQuizzesTable.tsx",
+          "frontend/src/components/teacher/StudentPerformanceOverview.tsx",
+          "frontend/src/components/teacher/TopicScoresChart.tsx",
+          "frontend/src/components/teacher/WeeklyActivityChart.tsx",
+          "frontend/src/components/teacher/QuestionBankSummary.tsx",
+          "frontend/src/components/teacher/RecentActivityFeed.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/TeacherDashboard.tsx"
+        ]
+      },
+      {
+        "id": "REQ-5",
+        "summary": "Create an AI Quiz Generator page (/generate) with: a topic input field with suggestion chips; a difficulty selector (Easy/Medium/Hard/Expert) with visual indicators; question type checkboxes (MCQ, True/False, Fill in blanks, Coding questions); a number-of-questions slider (5–50); a language selection dropdown (10+ languages); an advanced options accordion containing a PDF upload button, a 'Generate from text' textarea, and a voice input button; a Generate button with a loading spinner animation; and a preview section that shows generated quiz questions with a gradient card design.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/GenerateQuiz.tsx",
+          "frontend/src/components/generate/TopicInput.tsx",
+          "frontend/src/components/generate/DifficultySelector.tsx",
+          "frontend/src/components/generate/QuestionTypeCheckboxes.tsx",
+          "frontend/src/components/generate/QuestionCountSlider.tsx",
+          "frontend/src/components/generate/LanguageSelector.tsx",
+          "frontend/src/components/generate/AdvancedOptions.tsx",
+          "frontend/src/components/generate/GenerateButton.tsx",
+          "frontend/src/components/generate/QuizPreview.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/GenerateQuiz.tsx"
+        ]
+      },
+      {
+        "id": "REQ-6",
+        "summary": "Create a Quiz Playing Interface (/quiz/:id) with: a distraction-free layout with a dark mode toggle; prominent question text; a countdown timer with circular SVG progress indicator that turns red when under 10 seconds; answer option cards with hover and selected states; a progress bar showing 'Question X of N'; Previous/Next navigation; a flag question button; a live score display; a power-ups bar (50/50, Skip, Extra Time) in Kahoot style; an adaptive difficulty indicator badge; and smooth CSS animations between questions. Use mock quiz data.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/QuizPlay.tsx",
+          "frontend/src/components/quiz/DarkModeToggle.tsx",
+          "frontend/src/components/quiz/QuestionDisplay.tsx",
+          "frontend/src/components/quiz/CircularTimer.tsx",
+          "frontend/src/components/quiz/AnswerOptions.tsx",
+          "frontend/src/components/quiz/ProgressBar.tsx",
+          "frontend/src/components/quiz/QuizNavigation.tsx",
+          "frontend/src/components/quiz/FlagButton.tsx",
+          "frontend/src/components/quiz/LiveScore.tsx",
+          "frontend/src/components/quiz/PowerUpsBar.tsx",
+          "frontend/src/components/quiz/DifficultyBadge.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/QuizPlay.tsx"
+        ]
+      },
+      {
+        "id": "REQ-7",
+        "summary": "Create a Results Page (/results) with: a large animated score number and letter grade; a stats row (correct, incorrect, time taken, accuracy %); topic analysis breakdown with labeled progress bars; an AI feedback section with personalized text insights; a weak areas list with recommendations; a mini performance trend chart; recommended next quizzes cards; Share and Retake buttons; and a confetti animation that triggers for scores above 80%.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/Results.tsx",
+          "frontend/src/components/results/ScoreDisplay.tsx",
+          "frontend/src/components/results/StatsRow.tsx",
+          "frontend/src/components/results/TopicAnalysis.tsx",
+          "frontend/src/components/results/AIFeedback.tsx",
+          "frontend/src/components/results/WeakAreasList.tsx",
+          "frontend/src/components/results/PerformanceTrendChart.tsx",
+          "frontend/src/components/results/RecommendedQuizzes.tsx",
+          "frontend/src/components/results/ActionButtons.tsx",
+          "frontend/src/components/results/ConfettiAnimation.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/Results.tsx"
+        ]
+      },
+      {
+        "id": "REQ-8",
+        "summary": "Create a Quiz Library page (/library) with: a search bar; a filter sidebar (Subject, Difficulty, Popularity, AI Recommended, Recently Added); a quiz cards grid showing title, topic, question count, star rating, play button, and difficulty badge; a featured quizzes carousel at the top; and category tabs. Populate with at least 10 mock quizzes.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/QuizLibrary.tsx",
+          "frontend/src/components/library/SearchBar.tsx",
+          "frontend/src/components/library/FilterSidebar.tsx",
+          "frontend/src/components/library/QuizCard.tsx",
+          "frontend/src/components/library/QuizGrid.tsx",
+          "frontend/src/components/library/FeaturedCarousel.tsx",
+          "frontend/src/components/library/CategoryTabs.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/QuizLibrary.tsx"
+        ]
+      },
+      {
+        "id": "REQ-9",
+        "summary": "Create a Leaderboard page (/leaderboard) with: a global ranking table (rank, avatar, name, XP, quizzes, accuracy); Friends and Weekly Challenge tabs; a top-3 podium display with gold/silver/bronze medals; the current user's own rank highlighted; and a weekly challenge countdown timer. Populate with at least 10 mock users.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/Leaderboard.tsx",
+          "frontend/src/components/leaderboard/PodiumDisplay.tsx",
+          "frontend/src/components/leaderboard/RankingTable.tsx",
+          "frontend/src/components/leaderboard/LeaderboardTabs.tsx",
+          "frontend/src/components/leaderboard/CountdownTimer.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/Leaderboard.tsx"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "backend/main.mo",
+    "build-request.json",
+    "build-template/Dockerfile",
+    "build-template/LICENSE",
+    "build-template/README.md",
+    "build-template/deploy.sh",
+    "build-template/icp.yaml",
+    "build-template/package.json",
+    "build-template/pnpm-lock.yaml",
+    "build-template/pnpm-workspace.yaml",
+    "build-template/scripts/prune-unused-images.js",
+    "build-template/scripts/resize-images.js",
+    "build-template/src/backend/canister.yaml",
+    "build-template/src/backend/system-idl/aaaaa-aa.did",
+    "build-template/src/frontend/canister.yaml",
+    "build-template/src/frontend/components.json",
+    "build-template/src/frontend/env.json",
+    "build-template/src/frontend/eslint-rules/no-bigint-in-query-keys.js",
+    "build-template/src/frontend/eslint-rules/require-internet-identity-provider.js",
+    "build-template/src/frontend/eslint.config.js",
+    "build-template/src/frontend/package.json",
+    "build-template/src/frontend/postcss.config.js",
+    "build-template/src/frontend/src/components/ui/accordion.tsx",
+    "build-template/src/frontend/src/components/ui/alert-dialog.tsx",
+    "build-template/src/frontend/src/components/ui/alert.tsx",
+    "build-template/src/frontend/src/components/ui/aspect-ratio.tsx",
+    "build-template/src/frontend/src/components/ui/avatar.tsx",
+    "build-template/src/frontend/src/components/ui/badge.tsx",
+    "build-template/src/frontend/src/components/ui/breadcrumb.tsx",
+    "build-template/src/frontend/src/components/ui/button.tsx",
+    "build-template/src/frontend/src/components/ui/calendar.tsx",
+    "build-template/src/frontend/src/components/ui/card.tsx",
+    "build-template/src/frontend/src/components/ui/carousel.tsx",
+    "build-template/src/frontend/src/components/ui/chart.tsx",
+    "build-template/src/frontend/src/components/ui/checkbox.tsx",
+    "build-template/src/frontend/src/components/ui/collapsible.tsx",
+    "build-template/src/frontend/src/components/ui/command.tsx",
+    "build-template/src/frontend/src/components/ui/context-menu.tsx",
+    "build-template/src/frontend/src/components/ui/dialog.tsx",
+    "build-template/src/frontend/src/components/ui/drawer.tsx",
+    "build-template/src/frontend/src/components/ui/dropdown-menu.tsx",
+    "build-template/src/frontend/src/components/ui/form.tsx",
+    "build-template/src/frontend/src/components/ui/hover-card.tsx",
+    "build-template/src/frontend/src/components/ui/input-otp.tsx",
+    "build-template/src/frontend/src/components/ui/input.tsx",
+    "build-template/src/frontend/src/components/ui/label.tsx",
+    "build-template/src/frontend/src/components/ui/menubar.tsx",
+    "build-template/src/frontend/src/components/ui/navigation-menu.tsx",
+    "build-template/src/frontend/src/components/ui/pagination.tsx",
+    "build-template/src/frontend/src/components/ui/popover.tsx",
+    "build-template/src/frontend/src/components/ui/progress.tsx",
+    "build-template/src/frontend/src/components/ui/radio-group.tsx",
+    "build-template/src/frontend/src/components/ui/resizable.tsx",
+    "build-template/src/frontend/src/components/ui/scroll-area.tsx",
+    "build-template/src/frontend/src/components/ui/select.tsx",
+    "build-template/src/frontend/src/components/ui/separator.tsx",
+    "build-template/src/frontend/src/components/ui/sheet.tsx",
+    "build-template/src/frontend/src/components/ui/sidebar.tsx",
+    "build-template/src/frontend/src/components/ui/skeleton.tsx",
+    "build-template/src/frontend/src/components/ui/slider.tsx",
+    "build-template/src/frontend/src/components/ui/sonner.tsx",
+    "build-template/src/frontend/src/components/ui/switch.tsx",
+    "build-template/src/frontend/src/components/ui/table.tsx",
+    "build-template/src/frontend/src/components/ui/tabs.tsx",
+    "build-template/src/frontend/src/components/ui/textarea.tsx",
+    "build-template/src/frontend/src/components/ui/toggle-group.tsx",
+    "build-template/src/frontend/src/components/ui/toggle.tsx",
+    "build-template/src/frontend/src/components/ui/tooltip.tsx",
+    "build-template/src/frontend/src/hooks/use-mobile.tsx",
+    "build-template/src/frontend/src/lib/utils.ts",
+    "build-template/src/frontend/tsconfig.json",
+    "build-template/src/frontend/vite.config.js",
+    "build-template/tsconfig.json",
+    "caffeine.lock.json",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/public/assets/generated/achievement-badges.dim_800x400.png",
+    "frontend/public/assets/generated/gradient-bg.dim_1920x1080.png",
+    "frontend/public/assets/generated/hero-brain.dim_1200x600.png",
+    "frontend/public/assets/generated/leaderboard-trophy.dim_400x400.png",
+    "frontend/src/App.tsx",
+    "frontend/src/backend.d.ts",
+    "frontend/src/backend.ts",
+    "frontend/src/components/layout/AuthenticatedLayout.tsx",
+    "frontend/src/components/layout/LandingHeader.tsx",
+    "frontend/src/components/layout/Sidebar.tsx",
+    "frontend/src/components/layout/TopNavbar.tsx",
+    "frontend/src/config.ts",
+    "frontend/src/declarations/backend.did.d.ts",
+    "frontend/src/declarations/backend.did.js",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/index.css",
+    "frontend/src/lib/mockData.ts",
+    "frontend/src/lib/utils.ts",
+    "frontend/src/main.tsx",
+    "frontend/src/pages/Achievements.tsx",
+    "frontend/src/pages/Analytics.tsx",
+    "frontend/src/pages/CreateQuiz.tsx",
+    "frontend/src/pages/GenerateQuiz.tsx",
+    "frontend/src/pages/Landing.tsx",
+    "frontend/src/pages/Leaderboard.tsx",
+    "frontend/src/pages/Login.tsx",
+    "frontend/src/pages/Pricing.tsx",
+    "frontend/src/pages/Profile.tsx",
+    "frontend/src/pages/QuestionBank.tsx",
+    "frontend/src/pages/QuizLibrary.tsx",
+    "frontend/src/pages/QuizPlay.tsx",
+    "frontend/src/pages/Results.tsx",
+    "frontend/src/pages/Signup.tsx",
+    "frontend/src/pages/StudentDashboard.tsx",
+    "frontend/src/pages/TeacherDashboard.tsx",
+    "frontend/src/ui-summary.json",
+    "frontend/src/utils/StorageClient.ts",
+    "frontend/tailwind.config.js",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}
